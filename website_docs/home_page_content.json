@@ -1,0 +1,139 @@
+{
+  "seo": {
+    "title": "Select & Save - Save Web Text, Code & Screenshots with On-Device AI",
+    "description": "Select text from any webpage or document and instantly save it as QnA knowledge cards with automatic screenshot capture, deep-link navigation, and 100% private local Chrome AI.",
+    "keywords": [
+      "chrome extension",
+      "web clipper",
+      "text saver",
+      "local AI",
+      "Gemini Nano",
+      "privacy-first bookmark manager",
+      "QnA saver",
+      "deep link text highlighter",
+      "knowledge management tool"
+    ],
+    "canonicalUrl": "https://selectandsave.app/",
+    "ogImage": "https://selectandsave.app/assets/og-cover.png",
+    "twitterCard": "summary_large_image"
+  },
+  "hero": {
+    "badge": "🚀 Powered by Chrome Built-in Local AI (Gemini Nano)",
+    "headline": "Highlight Anything. Save Everything. Query Privately with Local AI.",
+    "subheadline": "Select any text, code snippet, or article section across the web. Save it with visual screenshot capture, organize into auto-domain folders, and query your knowledge base offline using built-in browser AI.",
+    "ctaPrimary": {
+      "text": "Add to Chrome — Free",
+      "url": "https://chromewebstore.google.com/detail/select-and-save",
+      "icon": "chrome"
+    },
+    "ctaSecondary": {
+      "text": "Explore Features",
+      "url": "#features",
+      "icon": "arrow-down"
+    },
+    "stats": [
+      { "label": "Privacy First", "value": "100% Local" },
+      { "label": "AI Latency", "value": "< 50ms" },
+      { "label": "Data Security", "value": "Zero Cloud Lock-in" }
+    ]
+  },
+  "features": [
+    {
+      "id": "instant-selection-popup",
+      "title": "One-Click Quick Action Bar",
+      "description": "Simply highlight text on any webpage. A floating overlay appears allowing you to instantly Save to QnA, Search Google, or ask Claude/ChatGPT in a single tap.",
+      "icon": "zap",
+      "tag": "Productivity"
+    },
+    {
+      "id": "visual-screenshot-cropping",
+      "title": "Automatic Visual Snippet Capture",
+      "description": "Every saved note automatically captures a high-resolution, cropped screenshot of the selected text area alongside rich HTML formatting.",
+      "icon": "camera",
+      "tag": "Visual Memory"
+    },
+    {
+      "id": "local-gemini-nano-ai",
+      "title": "On-Device Gemini Nano AI Chat",
+      "description": "Query your entire saved library using Chrome Built-in AI. Zero cloud server requests, zero API key fees, and complete offline privacy.",
+      "icon": "cpu",
+      "tag": "Privacy AI"
+    },
+    {
+      "id": "deep-link-navigation",
+      "title": "Deep-Link Text Fragment Highlighting",
+      "description": "Click 'Open Original Webpage' on any snippet to jump directly to the original site. Select & Save automatically scrolls and re-highlights the exact section for you.",
+      "icon": "link-2",
+      "tag": "Smart Links"
+    },
+    {
+      "id": "domain-custom-folders",
+      "title": "Smart Domain & Custom Folders",
+      "description": "Organize snippets effortlessly with automatic domain-based folders, custom color-coded collections, tag filtering, and @folder query scoping.",
+      "icon": "folder-heart",
+      "tag": "Organization"
+    },
+    {
+      "id": "mosaic-masonry-layout",
+      "title": "Dynamic Visual Mosaic Layout",
+      "description": "Switch seamlessly between a sleek Masonry Mosaic Grid and a clean List View to browse text snippets, code, and visual clippings effortlessly.",
+      "icon": "layout-grid",
+      "tag": "UI Experience"
+    }
+  ],
+  "howItWorks": {
+    "title": "How Select & Save Supercharges Your Research in 3 Steps",
+    "steps": [
+      {
+        "step": "01",
+        "title": "Highlight & Click",
+        "description": "Select any text or code on any webpage. The unobtrusive action menu lets you save it instantly to your personal QnA vault."
+      },
+      {
+        "step": "02",
+        "title": "Auto-Capture & Categorize",
+        "description": "Select & Save automatically extracts structured HTML, crops a visual screenshot, attaches the source URL, and routes it to domain folders."
+      },
+      {
+        "step": "03",
+        "title": "Ask Local AI & Re-Visit",
+        "description": "Search your library using plain English with built-in Gemini Nano AI or click back to jump straight to the source context on the original web page."
+      }
+    ]
+  },
+  "comparison": {
+    "title": "Why Choose Select & Save over Traditional Web Clippers?",
+    "headers": ["Feature", "Select & Save", "Traditional Web Clippers", "Basic Bookmarks"],
+    "rows": [
+      { "feature": "Privacy & Data Storage", "us": "100% Local Browser Storage", "them": "Cloud Account Required", "other": "Syncs Cloud Data" },
+      { "feature": "AI Query & Summarization", "us": "On-Device Gemini Nano AI", "them": "Paid Cloud AI Tier", "other": "No AI" },
+      { "feature": "Visual Screenshot Snippet", "us": "Auto-Cropped Selection PNG", "them": "Full Page / Manual", "other": "None" },
+      { "feature": "Deep Link Target Highlight", "us": "Auto Scroll & Re-Highlight", "them": "Generic URL Link", "other": "Page Top URL" },
+      { "feature": "Custom Action Overlays", "us": "Save, Google, Claude, ChatGPT", "them": "Extension Icon Only", "other": "None" }
+    ]
+  },
+  "faq": [
+    {
+      "question": "Is Select & Save completely free?",
+      "answer": "Yes! Select & Save is 100% free to use with no hidden subscriptions, cloud limits, or mandatory registration."
+    },
+    {
+      "question": "How does the local Chrome Built-in AI work?",
+      "answer": "Select & Save utilizes Chrome's native Prompt API powered by Gemini Nano. All AI processing happens locally inside your browser GPU/NPU. Your data never leaves your computer."
+    },
+    {
+      "question": "What happens if Chrome AI flags aren't enabled on my browser?",
+      "answer": "No problem! Select & Save features a smart indexed search fallback that instantly filters and streams your matching snippets based on titles, domain tags, and text content."
+    },
+    {
+      "question": "Can I export or backup my saved library?",
+      "answer": "All your data is stored securely in chrome.storage.local. You maintain full ownership over your knowledge base."
+    }
+  ],
+  "ctaSection": {
+    "headline": "Transform the Web into Your Personal Knowledge Engine",
+    "subheadline": "Never lose an important research snippet, code block, or web reference again.",
+    "buttonText": "Install Select & Save on Chrome",
+    "buttonUrl": "https://chromewebstore.google.com/detail/select-and-save"
+  }
+}

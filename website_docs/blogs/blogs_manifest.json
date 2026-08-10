@@ -1,0 +1,72 @@
+[
+  {
+    "id": "blog-1",
+    "title": "How to Effortlessly Save & Organize Web Research for Work and Study",
+    "slug": "how-to-organize-web-research-snippets",
+    "publishedDate": "2026-08-05",
+    "author": "Select & Save Team",
+    "category": "Productivity & Research",
+    "readTime": "5 min read",
+    "coverImage": "/assets/blog/blog-1-research-organization.png",
+    "metaTitle": "How to Save & Organize Web Research Snippets | Select & Save",
+    "metaDescription": "Stop losing valuable web quotes, code blocks, and references. Learn how to capture, tag, and organize web text snippets into a searchable knowledge base.",
+    "keywords": ["organize web research", "save text snippets from web", "web research tool", "chrome snippet saver", "digital notes manager"],
+    "filePath": "website_docs/blogs/blog_1_how_to_organize_research_snippets.md"
+  },
+  {
+    "id": "blog-2",
+    "title": "Unlocking Local AI: How Chrome Built-in AI & Gemini Nano Power Private Knowledge Retrieval",
+    "slug": "chrome-built-in-ai-gemini-nano-local-knowledge-base",
+    "publishedDate": "2026-08-06",
+    "author": "Select & Save AI Engineering",
+    "category": "AI Technology & Privacy",
+    "readTime": "6 min read",
+    "coverImage": "/assets/blog/blog-2-chrome-ai-gemini-nano.png",
+    "metaTitle": "Chrome Built-in AI & Gemini Nano Local Knowledge Search | Select & Save",
+    "metaDescription": "Learn how Chrome's experimental Prompt API and Gemini Nano model allow Select & Save to query your saved library offline with sub-50ms latency and 100% privacy.",
+    "keywords": ["chrome built in ai", "gemini nano prompt api", "local ai browser extension", "private ai knowledge base", "window.ai.languageModel"],
+    "filePath": "website_docs/blogs/blog_2_chrome_built_in_ai_gemini_nano.md"
+  },
+  {
+    "id": "blog-3",
+    "title": "Why You Keep Losing Web Highlights (And How Deep-Link Text Directives Fix It)",
+    "slug": "stop-losing-web-highlights-deep-link-text-fragment",
+    "publishedDate": "2026-08-07",
+    "author": "Select & Save Web Standards Team",
+    "category": "Web Technology",
+    "readTime": "4 min read",
+    "coverImage": "/assets/blog/blog-3-deep-link-fragments.png",
+    "metaTitle": "Why Web Highlights Fail & How Deep-Link Text Directives Fix It",
+    "metaDescription": "Learn how URL text fragment directives allow Select & Save to automatically scroll to and highlight saved quotes directly on live webpages.",
+    "keywords": ["deep link text fragment", "scroll to text fragment chrome", "web highlight target link", "find original quote on webpage", "select_and_save_text"],
+    "filePath": "website_docs/blogs/blog_3_stop_losing_web_highlights.md"
+  },
+  {
+    "id": "blog-4",
+    "title": "The Modern Web Clipper Alternative: Why Select & Save is Built for Speed & Privacy",
+    "slug": "modern-web-clipper-alternative-speed-privacy",
+    "publishedDate": "2026-08-08",
+    "author": "Select & Save Team",
+    "category": "Comparison & Tools",
+    "readTime": "5 min read",
+    "coverImage": "/assets/blog/blog-4-web-clipper-comparison.png",
+    "metaTitle": "Modern Web Clipper Alternative 2026 | Select & Save",
+    "metaDescription": "Discover why heavy legacy web clippers are falling behind modern lightweight extensions that emphasize instant text selection, visual PNG screenshots, and on-device AI.",
+    "keywords": ["web clipper alternative", "evernote web clipper alternative", "lightweight snippet manager", "local web clipper", "best chrome text saver"],
+    "filePath": "website_docs/blogs/blog_4_ultimate_web_clipper_alternative_2026.md"
+  },
+  {
+    "id": "blog-5",
+    "title": "Building Your Personal Knowledge Base Directly in Chrome: A Step-by-Step Guide",
+    "slug": "building-personal-knowledge-base-in-chrome",
+    "publishedDate": "2026-08-09",
+    "author": "Select & Save Team",
+    "category": "Knowledge Management",
+    "readTime": "7 min read",
+    "coverImage": "/assets/blog/blog-5-personal-knowledge-base.png",
+    "metaTitle": "Build a Personal Knowledge Base in Chrome | Select & Save",
+    "metaDescription": "Learn how to transform Chrome into a personal knowledge engine using domain folders, tags, mosaic grid layouts, and local AI search.",
+    "keywords": ["personal knowledge management chrome", "second brain browser extension", "qna knowledge base", "build second brain in chrome", "chrome knowledge base"],
+    "filePath": "website_docs/blogs/blog_5_building_personal_knowledge_base_chrome.md"
+  }
+]

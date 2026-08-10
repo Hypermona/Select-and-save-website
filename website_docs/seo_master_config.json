@@ -1,0 +1,113 @@
+{
+  "site": {
+    "name": "Select & Save",
+    "domain": "https://selectandsave.app",
+    "defaultLanguage": "en",
+    "themeColor": "#6366f1",
+    "author": "Hypermona",
+    "twitterHandle": "@SelectAndSaveApp"
+  },
+  "globalMeta": {
+    "defaultTitle": "Select & Save - Save Web Text, Code & Screenshots with On-Device AI",
+    "titleTemplate": "%s | Select & Save",
+    "defaultDescription": "Select text from any webpage or document and instantly save it as QnA knowledge cards with automatic screenshot capture, deep-link navigation, and 100% private local Chrome AI.",
+    "keywords": [
+      "chrome extension",
+      "web clipper",
+      "text saver",
+      "local AI",
+      "Gemini Nano",
+      "privacy-first bookmark manager",
+      "QnA saver",
+      "deep link text highlighter",
+      "personal knowledge management"
+    ],
+    "openGraph": {
+      "type": "website",
+      "locale": "en_US",
+      "url": "https://selectandsave.app/",
+      "siteName": "Select & Save",
+      "defaultImage": "https://selectandsave.app/assets/og-cover.png",
+      "imageWidth": 1200,
+      "imageHeight": 630,
+      "imageAlt": "Select & Save - Save Web Text & Code with On-Device AI"
+    },
+    "twitter": {
+      "card": "summary_large_image",
+      "site": "@SelectAndSaveApp",
+      "creator": "@Hypermona"
+    }
+  },
+  "jsonLdSchemas": {
+    "softwareApplication": {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Select & Save",
+      "operatingSystem": "Chrome OS, Windows, macOS, Linux",
+      "applicationCategory": "Browser Extension / Productivity",
+      "offers": {
+        "@type": "Offer",
+        "price": "0.00",
+        "priceCurrency": "USD"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.9",
+        "ratingCount": "128"
+      },
+      "downloadUrl": "https://chromewebstore.google.com/detail/select-and-save",
+      "featureList": [
+        "100% Private Local Browser Storage",
+        "On-Device Gemini Nano Local AI Chat",
+        "Automatic Selection Screenshot Cropping",
+        "Deep-Link Text Fragment Re-Highlighting",
+        "Domain-Based Auto Folders & Tagging",
+        "Masonry Mosaic Grid & List Views"
+      ]
+    },
+    "organization": {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Select & Save",
+      "url": "https://selectandsave.app",
+      "logo": "https://selectandsave.app/assets/icon-512.png",
+      "sameAs": [
+        "https://github.com/Hypermona/Select-and-save",
+        "https://chromewebstore.google.com/detail/select-and-save"
+      ]
+    },
+    "faqPage": {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Is Select & Save free to use?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes, Select & Save is completely free with no subscriptions or mandatory registration."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How does local Chrome AI work?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Select & Save uses Chrome's experimental Prompt API (Gemini Nano). Processing is performed locally inside your browser with zero server data transmission."
+          }
+        }
+      ]
+    }
+  },
+  "robotsTxt": "User-agent: *\nAllow: /\nSitemap: https://selectandsave.app/sitemap.xml",
+  "sitemapBlueprint": [
+    { "url": "https://selectandsave.app/", "priority": 1.0, "changefreq": "weekly" },
+    { "url": "https://selectandsave.app/privacy-policy", "priority": 0.5, "changefreq": "monthly" },
+    { "url": "https://selectandsave.app/blogs", "priority": 0.8, "changefreq": "daily" },
+    { "url": "https://selectandsave.app/blogs/how-to-organize-web-research-snippets", "priority": 0.7, "changefreq": "monthly" },
+    { "url": "https://selectandsave.app/blogs/chrome-built-in-ai-gemini-nano-local-knowledge-base", "priority": 0.7, "changefreq": "monthly" },
+    { "url": "https://selectandsave.app/blogs/stop-losing-web-highlights-deep-link-text-fragment", "priority": 0.7, "changefreq": "monthly" },
+    { "url": "https://selectandsave.app/blogs/modern-web-clipper-alternative-speed-privacy", "priority": 0.7, "changefreq": "monthly" },
+    { "url": "https://selectandsave.app/blogs/building-personal-knowledge-base-in-chrome", "priority": 0.7, "changefreq": "monthly" }
+  ]
+}

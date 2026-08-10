@@ -1,0 +1,37 @@
+{
+  "title": "Privacy Policy for Select & Save",
+  "lastUpdated": "2026-08-09",
+  "contactEmail": "privacy@selectandsave.app",
+  "sections": [
+    {
+      "id": "overview",
+      "heading": "Overview",
+      "content": "At Select & Save, your privacy is our top priority. Select & Save is engineered as a privacy-first, local-first Chrome Extension."
+    },
+    {
+      "id": "local-storage",
+      "heading": "1. Zero Remote Server Storage",
+      "content": "All text snippets, QnA cards, captured selection screenshots, custom folders, and tags are saved exclusively in your browser local storage (chrome.storage.local). Select & Save operates no remote cloud databases to store your notes."
+    },
+    {
+      "id": "local-ai",
+      "heading": "2. On-Device AI Processing",
+      "content": "AI interactions use Chrome Built-in AI (Gemini Nano Prompt API). Prompts and responses execute locally on your device hardware with zero data transmitted to remote AI clouds."
+    },
+    {
+      "id": "permissions",
+      "heading": "3. Chrome Extension Permissions",
+      "content": "Permissions requested (storage, activeTab, scripting, tabs, all_urls) are used solely to capture user-selected text, render selection overlays, crop visual screenshots, and apply deep-link text fragment markers."
+    },
+    {
+      "id": "analytics",
+      "heading": "4. Analytics & Telemetry",
+      "content": "Optional telemetry via Google Analytics 4 tracks aggregate event counts. No text selections, URLs, note content, or personal identifiers are ever logged. Users can opt out anytime in settings."
+    },
+    {
+      "id": "chrome-store-compliance",
+      "heading": "5. Chrome Web Store Compliance",
+      "content": "We do not sell, trade, or monetize user data. Stored content is never used for advertising, credit profiling, or third-party tracking."
+    }
+  ]
+}
