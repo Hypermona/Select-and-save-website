@@ -1,0 +1,50 @@
+---
+import { faqs } from '../lib/faqs';
+---
+
+<div class="space-y-4 max-w-3xl mx-auto">
+  {faqs.map((item, index) => (
+    <div class="rounded-3xl border border-[#00d2ff]/30 bg-gradient-to-r from-[#161926]/90 via-[#0e1017]/90 to-[#161926]/90 backdrop-blur-xl overflow-hidden transition-all duration-300 shadow-lg hover:border-[#00d2ff]/60">
+      <button 
+        class="faq-toggle w-full p-6 text-left flex items-center justify-between gap-4 font-display font-bold text-white text-base md:text-lg hover:text-[#00d2ff] transition-colors cursor-pointer"
+        aria-expanded="false"
+        aria-controls={`faq-answer-${index}`}
+      >
+        <span>{item.q}</span>
+        <span class="faq-icon text-[#00d2ff] text-2xl font-bold transition-transform duration-200 shrink-0">+</span>
+      </button>
+      <div 
+        id={`faq-answer-${index}`} 
+        class="faq-content hidden px-6 pb-6 text-sm md:text-base text-gray-300 leading-relaxed border-t border-white/10 pt-4 bg-[#08090d]/60"
+      >
+        {item.a}
+      </div>
+    </div>
+  ))}
+</div>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const toggles = document.querySelectorAll('.faq-toggle');
+    toggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+        const content = toggle.nextElementSibling;
+        const icon = toggle.querySelector('.faq-icon');
+
+        toggles.forEach(t => {
+          t.setAttribute('aria-expanded', 'false');
+          if (t.nextElementSibling) t.nextElementSibling.classList.add('hidden');
+          const i = t.querySelector('.faq-icon');
+          if (i) i.textContent = '+';
+        });
+
+        if (!isExpanded && content) {
+          toggle.setAttribute('aria-expanded', 'true');
+          content.classList.remove('hidden');
+          if (icon) icon.textContent = '−';
+        }
+      });
+    });
+  });
+</script>

@@ -1,0 +1,169 @@
+---
+import Layout from '../layouts/Layout.astro';
+
+const seoTitle = "Privacy Policy — Select & Save | 100% Local-First Web Snippet Saver";
+const seoDesc = "Select & Save is built with a zero-cloud, local-first architecture. Read our transparent privacy commitment: 100% on-device storage, local Chrome AI, and zero data selling.";
+
+const permissions = [
+  { name: "storage", desc: "Saves your text snippets, visual screenshots, Q&A cards, custom folders, and tags exclusively on your hard drive." },
+  { name: "activeTab", desc: "Detects highlighted text selections on your active tab only when you interact with the extension." },
+  { name: "scripting", desc: "Applies text highlight markers and auto-scrolls to saved text fragments when re-opening original source URLs." },
+  { name: "tabs", desc: "Allows opening original webpage URLs with deep-link target fragment highlighting." },
+  { name: "<all_urls>", desc: "Enables text selection, visual PNG snippet capture, and instant search overlays across web documents." }
+];
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://select-and-save.bunnycal.com" },
+    { "@type": "ListItem", "position": 2, "name": "Privacy Policy", "item": "https://select-and-save.bunnycal.com/privacy" }
+  ]
+};
+
+const privacyPageSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": seoTitle,
+  "description": seoDesc,
+  "url": "https://select-and-save.bunnycal.com/privacy"
+};
+
+const privacySchemas = [breadcrumbSchema, privacyPageSchema];
+---
+
+<Layout title={seoTitle} description={seoDesc} jsonLd={privacySchemas}>
+  <div class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto space-y-12">
+    
+    <!-- Page Header -->
+    <div class="space-y-4 text-center sm:text-left">
+      <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#141414] border border-[#262626] text-xs font-mono text-emerald-400">
+        <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+        <span>100% Local-First Architecture Guarantee</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl font-display font-bold text-white tracking-tight">
+        Privacy Policy
+      </h1>
+      <p class="text-sm font-mono text-[#999999]">
+        Last Updated: August 9, 2026 • Official Domain: select-and-save.bunnycal.com
+      </p>
+    </div>
+
+    <!-- Overview Banner -->
+    <div class="p-6 sm:p-8 rounded-2xl bg-gradient-to-r from-[#141414] to-[#1c1c1c] border border-[#262626] space-y-4">
+      <h2 class="text-xl font-display font-bold text-white flex items-center gap-2">
+        <span>🔒 Your Research Belongs Strictly to You</span>
+      </h2>
+      <p class="text-sm sm:text-base text-[#999999] leading-relaxed">
+        At <strong class="text-white">Select & Save</strong>, privacy is not an afterthought — it is the core foundation of our architecture. We believe that your web clips, code snippets, notes, and research context should never be collected, sold, or stored on remote cloud servers.
+      </p>
+    </div>
+
+    <!-- Section 1 -->
+    <section class="space-y-4">
+      <h2 class="text-2xl font-display font-bold text-white tracking-tight flex items-center gap-3 border-b border-[#262626] pb-3">
+        <span class="text-[#0099ff]">1.</span> Zero Remote Server Storage (100% Local-First)
+      </h2>
+      <ul class="space-y-3 text-sm text-[#999999] leading-relaxed list-disc list-inside pl-2">
+        <li><strong class="text-white">Local Chrome Storage:</strong> All text snippets, Q&A cards, auto-cropped PNG screenshots, custom tag folders, and preferences are saved exclusively inside your browser's local storage (<code class="text-[#0099ff]">chrome.storage.local</code> and IndexedDB).</li>
+        <li><strong class="text-white">No External Database Sync:</strong> Select & Save does not operate remote servers, cloud sync APIs, or user tracking backends.</li>
+        <li><strong class="text-white">Full Data Ownership:</strong> You retain complete control of your data. Uninstalling the extension permanently removes all local storage files from your machine.</li>
+      </ul>
+    </section>
+
+    <!-- Section 2 -->
+    <section class="space-y-4">
+      <h2 class="text-2xl font-display font-bold text-white tracking-tight flex items-center gap-3 border-b border-[#262626] pb-3">
+        <span class="text-[#6a4cf5]">2.</span> On-Device AI Processing (Gemini Nano)
+      </h2>
+      <div class="p-6 rounded-xl bg-[#141414] border border-[#6a4cf5]/30 space-y-3">
+        <p class="text-sm text-gray-300 leading-relaxed">
+          When using AI features to query or summarize your library, execution occurs <strong class="text-white">100% on-device</strong> using Chrome's native Built-in AI (<code class="text-violet-400">window.ai.languageModel</code>).
+        </p>
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs text-[#999999] pt-2">
+          <div class="p-3 rounded bg-[#090909] border border-[#262626]">
+            <span class="text-emerald-400 font-bold block mb-1">✓ Zero Cloud AI APIs</span>
+            Prompts are never sent to external servers, OpenAI, Google Cloud, or third-party APIs.
+          </div>
+          <div class="p-3 rounded bg-[#090909] border border-[#262626]">
+            <span class="text-emerald-400 font-bold block mb-1">✓ Offline Functional</span>
+            Query your knowledge base offline with sub-50ms local GPU acceleration.
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section 3: Permission Matrix -->
+    <section class="space-y-4">
+      <h2 class="text-2xl font-display font-bold text-white tracking-tight flex items-center gap-3 border-b border-[#262626] pb-3">
+        <span class="text-[#d44df0]">3.</span> Chrome Extension Permissions & Scope
+      </h2>
+      
+      <div class="overflow-x-auto rounded-xl border border-[#262626] bg-[#141414]">
+        <table class="w-full text-left text-xs sm:text-sm">
+          <thead>
+            <tr class="border-b border-[#262626] bg-[#1c1c1c] text-xs font-mono text-[#999999] uppercase">
+              <th class="py-3 px-4 w-1/4">Permission</th>
+              <th class="py-3 px-4">Purpose & Scope</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[#262626]">
+            {permissions.map(p => (
+              <tr>
+                <td class="py-3 px-4 font-mono text-[#0099ff] font-bold">{p.name}</td>
+                <td class="py-3 px-4 text-[#999999]">{p.desc}</td>
+              </tr>
+            ))}
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Section 4: Analytics -->
+    <section class="space-y-4">
+      <h2 class="text-2xl font-display font-bold text-white tracking-tight flex items-center gap-3 border-b border-[#262626] pb-3">
+        <span class="text-[#ff7a3d]">4.</span> Optional Telemetry & Analytics
+      </h2>
+      <p class="text-sm text-[#999999] leading-relaxed">
+        Select & Save includes an optional, anonymous telemetry integration via Google Analytics 4 (GA4) solely to measure performance metrics (e.g. feature usage counts, crash reports).
+      </p>
+      <div class="p-4 rounded-xl bg-[#141414] border border-[#262626] text-xs text-gray-300 space-y-2">
+        <div class="font-bold text-white">Strict Guarantee:</div>
+        <div>Your saved notes, search terms, URLs, text selections, and personal data are <strong class="text-emerald-400">NEVER</strong> included in telemetry events. You can opt out at any time in Settings.</div>
+      </div>
+    </section>
+
+    <!-- Section 5: Third Party Search -->
+    <section class="space-y-4">
+      <h2 class="text-2xl font-display font-bold text-white tracking-tight flex items-center gap-3 border-b border-[#262626] pb-3">
+        <span class="text-emerald-400">5.</span> External Search Links (Google, ChatGPT, Claude)
+      </h2>
+      <p class="text-sm text-[#999999] leading-relaxed">
+        When clicking external action buttons (e.g., "Search on Google", "Ask ChatGPT", "Ask Claude"), your text query is passed directly to the corresponding official website in a new tab. External service privacy policies govern your interactions on those platforms.
+      </p>
+    </section>
+
+    <!-- Section 6: Web Store Compliance -->
+    <section class="space-y-4">
+      <h2 class="text-2xl font-display font-bold text-white tracking-tight flex items-center gap-3 border-b border-[#262626] pb-3">
+        <span class="text-sky-400">6.</span> Chrome Web Store Policy Compliance
+      </h2>
+      <div class="p-6 rounded-xl bg-[#141414] border border-[#262626] space-y-3 text-sm text-[#999999]">
+        <p>Select & Save complies fully with Chrome Web Store Developer Policies:</p>
+        <ul class="list-disc list-inside space-y-1.5 text-xs">
+          <li>We do NOT sell, rent, or trade user data to third parties or brokers.</li>
+          <li>We do NOT monetize user data for targeted advertising.</li>
+          <li>We do NOT transfer data for credit checks or financial tracking.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Contact Footer -->
+    <div class="pt-8 border-t border-[#262626] text-center space-y-3">
+      <h3 class="text-lg font-display font-bold text-white">Questions Regarding Privacy?</h3>
+      <p class="text-sm text-[#999999]">
+        Contact our team at <a href="mailto:privacy@selectandsave.app" class="text-[#0099ff] hover:underline">privacy@selectandsave.app</a> or inspect our open codebase on <a href="https://github.com/Hypermona/Select-and-save" target="_blank" class="text-white hover:underline">GitHub</a>.
+      </p>
+    </div>
+
+  </div>
+</Layout>

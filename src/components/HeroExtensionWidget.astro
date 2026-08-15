@@ -1,0 +1,203 @@
+---
+---
+<div class="relative w-full max-w-5xl mx-auto my-8 rounded-3xl p-1 bg-gradient-to-r from-[#00d2ff] via-[#8b5cf6] to-[#ec4899] shadow-2xl shadow-[#00d2ff]/20 overflow-hidden group">
+  
+  <div class="w-full h-full rounded-[23px] bg-gradient-to-b from-[#0e1017] via-[#08090d] to-[#0e1017] overflow-hidden">
+    
+    <!-- Browser Header Bar -->
+    <div class="flex items-center justify-between px-5 py-3.5 border-b border-white/10 bg-[#08090d]/90 backdrop-blur-md">
+      <div class="flex items-center gap-2">
+        <span class="w-3.5 h-3.5 rounded-full bg-rose-500 shadow-sm shadow-rose-500/50"></span>
+        <span class="w-3.5 h-3.5 rounded-full bg-amber-500 shadow-sm shadow-amber-500/50"></span>
+        <span class="w-3.5 h-3.5 rounded-full bg-emerald-500 shadow-sm shadow-emerald-500/50"></span>
+      </div>
+      
+      <!-- Address Bar -->
+      <div class="flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#161926] border border-[#00d2ff]/30 text-xs font-mono text-gray-300 w-full max-w-md mx-4 justify-between shadow-inner">
+        <div class="flex items-center gap-2 truncate">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-[#00d2ff] shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+          </svg>
+          <span class="truncate text-white">https://developer.mozilla.org/en-US/docs/Web/JavaScript</span>
+        </div>
+        <span class="text-[10px] text-emerald-300 font-bold px-2 py-0.5 rounded-full bg-emerald-500/20 border border-emerald-500/40 shrink-0">
+          EXTENSION ACTIVE
+        </span>
+      </div>
+
+      <!-- Active Extension Badge Icon -->
+      <div class="flex items-center gap-2">
+        <img src="/favicon.svg" alt="Select & Save Extension Icon" class="w-8 h-8 object-contain drop-shadow-[0_0_10px_rgba(0,210,255,0.4)]" />
+      </div>
+    </div>
+
+    <!-- Interactive Sandbox Canvas -->
+    <div class="p-6 md:p-10 bg-[#08090d] relative">
+      
+      <!-- Quick Preset Buttons -->
+      <div class="mb-6 flex flex-wrap items-center justify-between gap-3 p-4 rounded-2xl bg-gradient-to-r from-[#161926] to-[#0e1017] border border-[#00d2ff]/30 shadow-lg">
+        <div class="flex items-center gap-2 text-xs text-gray-200 font-medium">
+          <span class="px-3 py-1 rounded-full bg-gradient-to-r from-[#00d2ff] to-[#8b5cf6] text-white text-[11px] font-mono font-bold shadow-md">
+            LIVE DEMO
+          </span>
+          <span>Click a preset or select text below to test the <strong>Action Bar</strong>:</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <button id="hero-preset-code" class="text-xs px-3.5 py-1.5 rounded-xl bg-[#00d2ff]/20 text-[#00d2ff] border border-[#00d2ff]/40 hover:bg-[#00d2ff]/30 transition-all cursor-pointer font-bold">
+            ⚡ Select Code Logic
+          </button>
+          <button id="hero-preset-qna" class="text-xs px-3.5 py-1.5 rounded-xl bg-[#ec4899]/20 text-[#ec4899] border border-[#ec4899]/40 hover:bg-[#ec4899]/30 transition-all cursor-pointer font-bold">
+            🧠 Select Q&A Quote
+          </button>
+        </div>
+      </div>
+
+      <!-- Web Article Content -->
+      <div class="space-y-5 text-gray-200 text-sm md:text-base leading-relaxed select-text" id="hero-article-content">
+        <h3 class="text-xl md:text-2xl font-display font-bold text-white tracking-tight">
+          Modern Web Architecture & Local-First Knowledge Systems
+        </h3>
+        
+        <p id="hero-para-1" class="p-4 rounded-2xl border border-transparent hover:border-[#00d2ff]/40 hover:bg-[#00d2ff]/10 transition-all">
+          Building a personal second brain shouldn't mean dumping 30-page article links into bookmark graveyards. With Select & Save, developers and researchers save <span class="bg-gradient-to-r from-[#00d2ff]/40 to-[#8b5cf6]/40 text-white font-bold px-2 py-0.5 rounded-md border border-[#00d2ff]/60 shadow-sm">exact 2-line code blocks and structured Q&A cards</span> with automatic screenshot crops.
+        </p>
+
+        <!-- Code Snippet Box -->
+        <div id="hero-code-box" class="p-5 rounded-2xl bg-gradient-to-r from-[#0e1017] via-[#161926] to-[#0e1017] border border-[#8b5cf6]/40 font-mono text-xs text-emerald-400 space-y-2 hover:border-[#8b5cf6] shadow-xl transition-all cursor-pointer">
+          <div class="text-gray-400 font-sans text-[11px] uppercase tracking-wider mb-2 flex justify-between font-semibold">
+            <span>// Chrome Built-in AI (Gemini Nano) Local Query Handler</span>
+            <span class="text-[#00d2ff] font-bold">100% Offline</span>
+          </div>
+          <div><span class="text-[#c084fc] font-bold">const</span> session = <span class="text-[#c084fc] font-bold">await</span> window.ai.languageModel.<span class="text-[#00d2ff]">create</span>();</div>
+          <div><span class="text-[#c084fc] font-bold">const</span> answer = <span class="text-[#c084fc] font-bold">await</span> session.<span class="text-[#00d2ff]">prompt</span>(<span class="text-emerald-300">"Summarize saved research snippets"</span>);</div>
+        </div>
+      </div>
+
+      <!-- Floating Extension Overlay -->
+      <div id="hero-floating-overlay" class="hidden absolute z-30 flex items-center gap-2 p-2 rounded-full bg-gradient-to-r from-[#161926] to-[#0e1017] border-2 border-[#00d2ff] shadow-2xl shadow-[#00d2ff]/50 backdrop-blur-xl animate-fade-in transition-all">
+        <button id="hero-act-qna" class="flex items-center gap-1.5 px-4 py-2 rounded-full bg-gradient-to-r from-[#00d2ff] to-[#8b5cf6] text-white text-xs font-extrabold hover:opacity-90 transition-all shadow-md cursor-pointer">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-white" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+            <polyline points="17 21 17 13 7 13 7 21"></polyline>
+            <polyline points="7 3 7 8 15 8"></polyline>
+          </svg>
+          <span>Save Q&A</span>
+        </button>
+
+        <button id="hero-act-google" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#08090d] text-white hover:text-[#00d2ff] border border-white/20 text-xs font-bold transition-all cursor-pointer">
+          <svg viewBox="0 0 24 24" class="w-3.5 h-3.5 shrink-0">
+            <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+            <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+            <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+            <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+          </svg>
+          <span>Google</span>
+        </button>
+
+        <button id="hero-act-gpt" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#08090d] text-white hover:text-emerald-400 border border-white/20 text-xs font-bold transition-all cursor-pointer">
+          <svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5 text-emerald-400 shrink-0">
+            <path d="M9.205 8.658v-2.26c0-.19.072-.333.238-.428l4.543-2.616c.619-.357 1.356-.523 2.117-.523 2.854 0 4.662 2.212 4.662 4.566 0 .167 0 .357-.024.547l-4.71-2.759a.8.8 0 0 0-.856 0zm10.609 8.8V12.06c0-.333-.143-.57-.429-.737l-5.97-3.473 1.95-1.118a.43.43 0 0 1 .476 0l4.543 2.617c1.309.76 2.189 2.378 2.189 3.948 0 1.808-1.07 3.473-2.76 4.163zM7.802 12.703l-1.95-1.142a.45.45 0 0 1-.239-.428V5.899c0-2.545 1.95-4.472 4.591-4.472 1 0 1.927.333 2.712.928L8.23 5.067c-.285.166-.428.404-.428.737zM12 15.128l-2.795-1.57v-3.33L12 8.658l2.795 1.57v3.33zm1.796 7.23c-1 0-1.927-.332-2.712-.927l4.686-2.712c.285-.166.428-.404.428-.737v-6.898l1.974 1.142c.167.095.238.238.238.428v5.233c0 2.545-1.974 4.472-4.614 4.472zm-5.637-5.303-4.544-2.617c-1.308-.761-2.188-2.378-2.188-3.948A4.48 4.48 0 0 1 4.21 6.327v5.423c0 .333.143.571.428.738l5.947 3.449-1.95 1.118a.43.43 0 0 1-.476 0m-.262 3.9c-2.688 0-4.662-2.021-4.662-4.519 0-.19.024-.38.047-.57l4.686 2.71a.79.79 0 0 0 .856 0l5.97-3.448v2.26c0 .19-.07.333-.237.428l-4.543 2.616c-.619.357-1.356.523-2.117.523m5.899 2.83a5.95 5.95 0 0 0 5.827-4.756C22.287 18.339 24 15.84 24 13.296c0-1.665-.713-3.282-1.998-4.448.119-.5.19-.999.19-1.498 0-3.401-2.759-5.947-5.946-5.946a5.7 5.7 0 0 0-1.88.31A5.96 5.96 0 0 0 10.205 0a5.95 5.95 0 0 0-5.827 4.757C1.713 5.447 0 7.945 0 10.49c0 1.666.713 3.283 1.998 4.448-.119.5-.19 1-.19 1.499 0 3.401 2.759 5.946 5.946 5.946.642 0 1.26-.095 1.88-.309a5.96 5.96 0 0 0 4.162 1.713z"/>
+          </svg>
+          <span>ChatGPT</span>
+        </button>
+
+        <button id="hero-act-claude" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#08090d] text-white hover:text-amber-400 border border-white/20 text-xs font-bold transition-all cursor-pointer">
+          <svg viewBox="0 0 256 257" class="w-3.5 h-3.5 shrink-0">
+            <path d="M50.2278481,170.321013 L100.585316,142.063797 L101.427848,139.601013 L100.585316,138.24 L98.1225316,138.24 L89.6972152,137.721519 L60.921519,136.943797 L35.9696203,135.906835 L11.795443,134.610633 L5.70329114,133.31443 L0,125.796456 L0.583291139,122.037468 L5.70329114,118.602532 L13.0268354,119.250633 L29.2293671,120.352405 L53.5331646,122.037468 L71.161519,123.07443 L97.28,125.796456 L101.427848,125.796456 L102.011139,124.111392 L100.585316,123.07443 L99.4835443,122.037468 L74.3372152,104.992405 L47.116962,86.9751899 L32.8587342,76.6055696 L25.1463291,71.3559494 L21.2577215,66.4303797 L19.5726582,55.6718987 L26.5721519,47.9594937 L35.9696203,48.6075949 L38.3675949,49.2556962 L47.8946835,56.5792405 L68.2450633,72.3281013 L94.8172152,91.9007595 L98.7058228,95.1412658 L100.261266,94.0394937 L100.455696,93.2617722 L98.7058228,90.3453165 L84.2531646,64.2268354 L68.8283544,37.6546835 L61.958481,26.636962 L60.1437975,20.0263291 C59.4956962,17.3043038 59.0420253,15.0359494 59.0420253,12.2491139 L67.0136709,1.42582278 L71.4207595,-1.42108547e-14 L82.0496203,1.42582278 L86.521519,5.31443038 L93.1321519,20.4151899 L103.825823,44.2005063 L120.417215,76.5407595 L125.277975,86.1326582 L127.87038,95.0116456 L128.842532,97.7336709 L130.527595,97.7336709 L130.527595,96.1782278 L131.888608,77.9665823 L134.416203,55.6070886 L136.878987,26.8313924 L137.721519,18.7301266 L141.739747,9.00860759 L149.711392,3.75898734 L155.933165,6.74025316 L161.053165,14.0637975 L160.340253,18.7949367 L157.294177,38.5620253 L151.331646,69.5412658 L147.443038,90.2805063 L149.711392,90.2805063 L152.303797,87.6881013 L162.803038,73.7539241 L180.431392,51.718481 L188.208608,42.9691139 L197.282025,33.3124051 L203.114937,28.7108861 L214.132658,28.7108861 L222.233924,40.7655696 L218.604557,53.2091139 L207.262785,67.596962 L197.865316,79.7812658 L184.38481,97.9281013 L175.959494,112.44557 L176.737215,113.612152 L178.746329,113.417722 L209.207089,106.936709 L225.668861,103.955443 L245.306329,100.585316 L254.185316,104.733165 L255.157468,108.945823 L251.657722,117.56557 L230.659241,122.75038 L206.031392,127.675949 L169.348861,136.360506 L168.89519,136.684557 L169.413671,137.332658 L185.940253,138.888101 L193.004557,139.276962 L210.308861,139.276962 L242.519494,141.674937 L250.94481,147.248608 L256,154.053671 L255.157468,159.238481 L242.195443,165.849114 L224.696709,161.701266 L183.866329,151.979747 L169.867342,148.48 L167.923038,148.48 L167.923038,149.646582 L179.588861,161.053165 L200.976203,180.366582 L227.742785,205.253671 L229.103797,211.410633 L225.668861,216.271392 L222.039494,215.752911 L198.513418,198.059747 L189.44,190.088101 L168.89519,172.783797 L167.534177,172.783797 L167.534177,174.598481 L172.265316,181.533165 L197.282025,219.123038 L198.578228,230.659241 L196.763544,234.418228 L190.282532,236.686582 L183.153418,235.39038 L168.506329,214.84557 L153.40557,191.708354 L141.221266,170.969114 L139.730633,171.811646 L132.536709,249.259747 L129.166582,253.213165 L121.389367,256.19443 L114.908354,251.268861 L111.473418,243.297215 L114.908354,227.548354 L119.056203,207.003544 L122.426329,190.671392 L125.472405,170.385823 L127.287089,163.64557 L127.157468,163.191899 L125.666835,163.386329 L110.371646,184.38481 L87.1048101,215.817722 L68.6987342,235.52 L64.2916456,237.269873 L56.6440506,233.316456 L57.356962,226.252152 L61.6344304,219.96557 L87.1048101,187.560506 L102.46481,167.469367 L112.380759,155.868354 L112.315949,154.183291 L111.732658,154.183291 L44.0708861,198.124557 L32.0162025,199.68 L26.8313924,194.819241 L27.4794937,186.847595 L29.9422785,184.25519 L50.2926582,170.256203 L50.2278481,170.321013 Z" fill="#D97757"/>
+          </svg>
+          <span>Claude</span>
+        </button>
+      </div>
+
+      <!-- Result Feedback Toast -->
+      <div id="hero-result-toast" class="hidden mt-6 p-4 rounded-2xl bg-gradient-to-r from-[#10b981]/20 via-[#0e1017] to-[#00d2ff]/20 border border-emerald-400 shadow-2xl space-y-2">
+        <div class="flex items-center justify-between">
+          <div class="flex items-center gap-2 text-xs font-bold text-emerald-300">
+            <span class="w-2.5 h-2.5 rounded-full bg-emerald-400 animate-ping"></span>
+            <span id="hero-toast-title">Q&A Snippet Saved!</span>
+          </div>
+          <span class="text-[10px] text-emerald-300 font-mono font-bold">Auto PNG Screenshot Captured</span>
+        </div>
+        <div id="hero-toast-body" class="text-xs text-gray-200 font-mono p-3 rounded-xl bg-[#08090d] border border-emerald-500/30 leading-relaxed">
+          Q: How does local Chrome AI prompt session work? <br/>
+          <span class="text-[#00d2ff]">A: "const session = await window.ai.languageModel.create(); const answer = await session.prompt(...)"</span>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const article = document.getElementById('hero-article-content');
+    const overlay = document.getElementById('hero-floating-overlay');
+    const toast = document.getElementById('hero-result-toast');
+    const toastTitle = document.getElementById('hero-toast-title');
+    const toastBody = document.getElementById('hero-toast-body');
+
+    const btnCode = document.getElementById('hero-preset-code');
+    const btnQna = document.getElementById('hero-preset-qna');
+
+    const actQna = document.getElementById('hero-act-qna');
+    const actGoogle = document.getElementById('hero-act-google');
+    const actGpt = document.getElementById('hero-act-gpt');
+    const actClaude = document.getElementById('hero-act-claude');
+
+    let activeText = "";
+
+    function showOverlay(x, y, text) {
+      activeText = text;
+      if (overlay) {
+        overlay.style.left = `${Math.min(x, 480)}px`;
+        overlay.style.top = `${Math.max(y - 55, 15)}px`;
+        overlay.classList.remove('hidden');
+      }
+    }
+
+    article?.addEventListener('mouseup', () => {
+      const sel = window.getSelection();
+      const text = sel ? sel.toString().trim() : '';
+      if (text.length > 3) {
+        showOverlay(120, 150, text);
+      }
+    });
+
+    btnCode?.addEventListener('click', () => {
+      showOverlay(160, 190, "const session = await window.ai.languageModel.create();");
+    });
+
+    btnQna?.addEventListener('click', () => {
+      showOverlay(100, 120, "exact 2-line code blocks and structured Q&A cards");
+    });
+
+    actQna?.addEventListener('click', () => {
+      overlay?.classList.add('hidden');
+      toastTitle.textContent = "✅ Q&A Knowledge Card Created!";
+      toastBody.innerHTML = `<strong>Q:</strong> Saved Snippet<br/><span class="text-[#00d2ff]">"${activeText || 'exact 2-line code blocks and structured Q&A cards'}"</span><br/><span class="text-[10px] text-gray-400">Cropped PNG screenshot attached to chrome.storage.local</span>`;
+      toast?.classList.remove('hidden');
+    });
+
+    actGoogle?.addEventListener('click', () => {
+      overlay?.classList.add('hidden');
+      toastTitle.textContent = "🔍 Instant Google Search Launched!";
+      toastBody.textContent = `Searching Google for: "${activeText || 'Chrome Built-in AI Prompt API'}"`;
+      toast?.classList.remove('hidden');
+    });
+
+    actGpt?.addEventListener('click', () => {
+      overlay?.classList.add('hidden');
+      toastTitle.textContent = "🤖 Prompt Sent to ChatGPT!";
+      toastBody.textContent = `ChatGPT query: "Explain code logic: ${activeText || 'window.ai.languageModel'}"`;
+      toast?.classList.remove('hidden');
+    });
+
+    actClaude?.addEventListener('click', () => {
+      overlay?.classList.add('hidden');
+      toastTitle.textContent = "🧠 Deep Analysis Sent to Claude AI!";
+      toastBody.textContent = `Claude analysis triggered for text selection.`;
+      toast?.classList.remove('hidden');
+    });
+  });
+</script>

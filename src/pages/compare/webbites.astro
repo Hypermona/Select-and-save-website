@@ -1,0 +1,78 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
+import { getFaqPageSchema } from '../../lib/faqs';
+
+const seoTitle = "Select & Save vs Webbites — Advanced Web Clipper & Q&A Maker";
+const seoDesc = "Webbites offers basic bookmark saving. Select & Save delivers on-device Gemini Nano AI, auto Q&A card conversion, deep-link text fragment scrolling, and instant search overlays.";
+
+const faqSchema = getFaqPageSchema([
+  {
+    q: "How is Select & Save more advanced than Webbites?",
+    a: "Select & Save includes local Gemini Nano AI search, automatic visual PNG screenshot capture, deep-link text fragment scrolling on live pages, and instant multi-search overlays for Google, Claude, and ChatGPT."
+  },
+  {
+    q: "Does Select & Save work offline?",
+    a: "Yes, 100%! Select & Save operates completely offline using Chrome's on-device Prompt API."
+  }
+]);
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://select-and-save.bunnycal.com" },
+    { "@type": "ListItem", "position": 2, "name": "Comparisons", "item": "https://select-and-save.bunnycal.com/compare" },
+    { "@type": "ListItem", "position": 3, "name": "Select & Save vs Webbites", "item": "https://select-and-save.bunnycal.com/compare/webbites" }
+  ]
+};
+
+const webbitesSchemas = [faqSchema, breadcrumbSchema];
+---
+
+<Layout title={seoTitle} description={seoDesc} jsonLd={webbitesSchemas}>
+  <div class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto space-y-12">
+    
+    <div class="space-y-4 text-center sm:text-left">
+      <div class="flex items-center gap-2 justify-center sm:justify-start">
+        <a href="/compare" class="text-xs text-[#0099ff] hover:underline font-mono">← All Comparisons</a>
+        <span class="text-xs text-[#262626]">•</span>
+        <span class="text-xs text-[#d44df0] font-mono">Competitor Teardown</span>
+      </div>
+      <h1 class="text-4xl sm:text-6xl font-display font-bold text-white tracking-tight leading-tight">
+        Select & Save vs Webbites
+      </h1>
+      <p class="text-base sm:text-lg text-[#999999]">
+        Why users choose Select & Save for Chrome local AI, Q&A cards, and instant search overlays.
+      </p>
+    </div>
+
+    <!-- Core Differentiator Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-2xl bg-[#141414] border border-[#262626] space-y-3">
+        <div class="text-xs font-mono text-[#999999] font-bold uppercase">Basic Web Saver</div>
+        <h3 class="text-lg font-bold text-white">Webbites Features</h3>
+        <p class="text-xs text-[#999999] leading-relaxed">
+          Webbites provides basic text saving capabilities, but relies on standard cloud sync and lacks built-in browser AI models, multi-engine search overlays, and deep-link target scrolling.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-[#141414] border border-[#d44df0]/50 space-y-3 bg-gradient-to-br from-[#d44df0]/10 to-[#141414]">
+        <div class="text-xs font-mono text-[#d44df0] font-bold uppercase">Next-Gen Knowledge Engine</div>
+        <h3 class="text-lg font-bold text-white">Select & Save Superpowers</h3>
+        <p class="text-xs text-gray-300 leading-relaxed">
+          Select & Save converts text into structured Q&A flashcard cards, captures auto-cropped PNG screenshots, runs on-device Gemini Nano AI offline, and launches instant floating search overlays over any selected text.
+        </p>
+      </div>
+    </div>
+
+    <!-- Feature Table Embed -->
+    <section class="space-y-6 pt-4">
+      <h2 class="text-2xl font-display font-bold text-white">
+        Feature Breakdown: Select & Save vs Webbites
+      </h2>
+      <ComparisonTable />
+    </section>
+
+  </div>
+</Layout>

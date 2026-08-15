@@ -1,0 +1,138 @@
+---
+---
+<div class="max-w-5xl mx-auto space-y-8">
+  
+  <!-- Interactive Tab Controls -->
+  <div class="flex flex-wrap items-center justify-center gap-3 p-2.5 rounded-2xl bg-gradient-to-r from-[#161926] via-[#0e1017] to-[#161926] border border-[#00d2ff]/30 max-w-2xl mx-auto shadow-xl">
+    <button class="wf-tab active px-5 py-2.5 rounded-xl text-xs sm:text-sm font-extrabold bg-gradient-to-r from-[#00d2ff] to-[#8b5cf6] text-white transition-all cursor-pointer shadow-lg shadow-[#00d2ff]/20" data-step="1">
+      01. Highlight & Trigger
+    </button>
+    <button class="wf-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-gray-400 hover:text-white transition-all cursor-pointer" data-step="2">
+      02. Auto-Capture & Format
+    </button>
+    <button class="wf-tab px-5 py-2.5 rounded-xl text-xs sm:text-sm font-bold text-gray-400 hover:text-white transition-all cursor-pointer" data-step="3">
+      03. Query Privately & Jump
+    </button>
+  </div>
+
+  <!-- Step Content Display -->
+  <div class="colorful-glass-card p-8 sm:p-12 rounded-3xl border border-[#8b5cf6]/40 relative overflow-hidden transition-all duration-300 min-h-[340px] flex flex-col justify-between shadow-2xl" id="wf-panel">
+    
+    <!-- Ambient Glow behind active panel -->
+    <div class="absolute -right-20 -top-20 w-96 h-96 bg-gradient-to-br from-[#00d2ff]/25 via-[#8b5cf6]/25 to-[#ec4899]/20 blur-3xl pointer-events-none"></div>
+
+    <!-- Step 1 Content -->
+    <div class="wf-step-content space-y-6 relative z-10" id="step-1-content">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#00d2ff]/20 border border-[#00d2ff]/40 text-xs font-mono text-[#00d2ff] font-bold shadow-sm">
+        STEP 01 — ACTION OVERLAY
+      </div>
+      <h3 class="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight">
+        Highlight Text & Trigger Instant Action Overlay
+      </h3>
+      <p class="text-sm sm:text-base text-gray-300 leading-relaxed max-w-2xl">
+        Highlight text, code blocks, or tables on any webpage. A sleek floating quick action bar pops up instantly over your selection, offering 1-click options to save as Q&A or search external AI providers.
+      </p>
+
+      <div class="p-4 rounded-2xl bg-[#08090d] border border-[#00d2ff]/30 max-w-xl font-mono text-xs text-gray-300 space-y-2 shadow-lg">
+        <div class="text-[#00d2ff] font-bold flex items-center justify-between">
+          <span>Selection Event Triggered</span>
+          <span class="text-emerald-400">Floating Action Bar Active</span>
+        </div>
+        <div class="p-3 rounded-xl bg-[#161926] border border-white/10 text-gray-200">
+          "Highlight text on any site to launch instant floating quick action bar..."
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2 Content -->
+    <div class="wf-step-content hidden space-y-6 relative z-10" id="step-2-content">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#8b5cf6]/20 border border-[#8b5cf6]/40 text-xs font-mono text-[#c084fc] font-bold shadow-sm">
+        STEP 02 — DOM PARSING & PNG CROPPING
+      </div>
+      <h3 class="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight">
+        Auto-Capture Visual Screenshots & Domain Folders
+      </h3>
+      <p class="text-sm sm:text-base text-gray-300 leading-relaxed max-w-2xl">
+        Select & Save parses the HTML structure, generates an auto-cropped PNG screenshot snippet of your selection context, extracts meta tags, and organizes notes into auto-domain folders.
+      </p>
+
+      <div class="p-4 rounded-2xl bg-[#08090d] border border-[#8b5cf6]/30 max-w-xl font-mono text-xs text-gray-300 space-y-2 shadow-lg">
+        <div class="text-[#c084fc] font-bold flex items-center justify-between">
+          <span>DOM Parsing Complete</span>
+          <span class="text-emerald-400">PNG Crop Created</span>
+        </div>
+        <div class="p-3 rounded-xl bg-[#161926] border border-white/10 text-emerald-300">
+          ✓ HTML Structure Parsed • Auto-Grouped under domain "medium.com"
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 3 Content -->
+    <div class="wf-step-content hidden space-y-6 relative z-10" id="step-3-content">
+      <div class="inline-flex items-center gap-2 px-3.5 py-1 rounded-full bg-[#ec4899]/20 border border-[#ec4899]/40 text-xs font-mono text-[#f472b6] font-bold shadow-sm">
+        STEP 03 — OFFLINE AI & DEEP-LINK SCROLL
+      </div>
+      <h3 class="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight">
+        Query Privately Offline & Jump Back to Live Context
+      </h3>
+      <p class="text-sm sm:text-base text-gray-300 leading-relaxed max-w-2xl">
+        Ask questions in plain English offline using Chrome's built-in AI (Gemini Nano). Whenever you want to review the source, click 'Open Original Webpage' to scroll straight back to your highlighted quote.
+      </p>
+
+      <div class="p-4 rounded-2xl bg-[#08090d] border border-[#ec4899]/30 max-w-xl font-mono text-xs text-gray-300 space-y-2 shadow-lg">
+        <div class="text-[#f472b6] font-bold flex items-center justify-between">
+          <span class="flex items-center gap-1.5">
+            <svg viewBox="0 0 24 24" class="w-3.5 h-3.5 shrink-0" fill="none">
+              <path d="M12 24C12 17.3726 17.3726 12 24 12C17.3726 12 12 6.62742 12 0C12 6.62742 6.62742 12 0 12C6.62742 12 12 17.3726 12 24Z" fill="url(#wf-gemini-sparkle)"/>
+              <defs>
+                <linearGradient id="wf-gemini-sparkle" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#1A73E8"/>
+                  <stop offset="0.5" stop-color="#8A2BE2"/>
+                  <stop offset="1" stop-color="#E8710A"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            <span>Gemini Nano Prompt API Active</span>
+          </span>
+          <span class="text-amber-400 font-bold">Deep-Link Fragment Target</span>
+        </div>
+        <div class="p-3 rounded-xl bg-[#161926] border border-white/10 text-gray-200">
+          URL Jump Target: <span class="text-[#f472b6] font-bold">#:~:text=exact_highlight_quote</span>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const tabs = document.querySelectorAll('.wf-tab');
+    const step1 = document.getElementById('step-1-content');
+    const step2 = document.getElementById('step-2-content');
+    const step3 = document.getElementById('step-3-content');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const step = tab.getAttribute('data-step');
+
+        tabs.forEach(t => {
+          t.classList.remove('bg-gradient-to-r', 'from-[#00d2ff]', 'to-[#8b5cf6]', 'text-white', 'shadow-lg', 'shadow-[#00d2ff]/20', 'font-extrabold');
+          t.classList.add('text-gray-400', 'font-bold');
+        });
+
+        tab.classList.remove('text-gray-400');
+        tab.classList.add('bg-gradient-to-r', 'from-[#00d2ff]', 'to-[#8b5cf6]', 'text-white', 'shadow-lg', 'shadow-[#00d2ff]/20', 'font-extrabold');
+
+        step1?.classList.add('hidden');
+        step2?.classList.add('hidden');
+        step3?.classList.add('hidden');
+
+        if (step === '1') step1?.classList.remove('hidden');
+        if (step === '2') step2?.classList.remove('hidden');
+        if (step === '3') step3?.classList.remove('hidden');
+      });
+    });
+  });
+</script>

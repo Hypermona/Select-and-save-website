@@ -1,17 +1,287 @@
 ---
+import Layout from '../layouts/Layout.astro';
+import HeroExtensionWidget from '../components/HeroExtensionWidget.astro';
+import BentoGrid from '../components/BentoGrid.astro';
+import InteractiveWorkflow from '../components/InteractiveWorkflow.astro';
+import ComparisonTable from '../components/ComparisonTable.astro';
+import FaqAccordion from '../components/FaqAccordion.astro';
+import { getFaqPageSchema } from '../lib/faqs';
 
+const seoTitle = "Select & Save — Next-Gen Web Snippet Saver & On-Device AI Knowledge Engine";
+const seoDesc = "Select text from any webpage and instantly save it as Q&A knowledge cards with automatic visual PNG screenshots, deep-link navigation, and 100% private local Chrome AI.";
+
+const faqSchema = getFaqPageSchema();
+
+const softwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Select & Save",
+  "operatingSystem": "Chrome, Edge, Brave, Opera, Arc (Chromium Browsers)",
+  "applicationCategory": "ProductivityApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": seoDesc,
+  "url": "https://select-and-save.bunnycal.com",
+  "author": {
+    "@type": "Organization",
+    "name": "Select & Save",
+    "url": "https://select-and-save.bunnycal.com"
+  }
+};
+
+const websiteSchema = {
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Select & Save",
+  "url": "https://select-and-save.bunnycal.com",
+  "description": seoDesc
+};
+
+const homepageSchemas = [softwareSchema, faqSchema, websiteSchema];
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<Layout title={seoTitle} description={seoDesc} jsonLd={homepageSchemas}>
+  
+  <!-- HERO SECTION WITH AMBIENT MESH LIGHTING & NOISE -->
+  <section 
+    class="relative pt-20 pb-16 md:pt-28 md:pb-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto text-center rounded-2xl"
+  >
+    
+    <div class="relative z-10 space-y-8 max-w-4xl mx-auto">
+      
+      <!-- Motion Display Headline with Floating Extension Toolbar Overlay (from content.ts) -->
+      <h1 class="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold tracking-tight leading-[0.95] text-white">
+        Transform the Web <br class="hidden sm:inline" />
+        <span class="relative inline-block mt-3 sm:mt-5">
+          into your{" "}
+          <mark id="headline-selected-target" class="bg-accent-blue/30 text-white">
+            Personal Second Brain.
+          </mark>
+          <!-- EXTENSION FLOATING TOOLBAR OVERLAY WITH MOVING BORDER -->
+          <div class="moving-border-toolbar-wrapper">
+            <div id="headline-toolbar" class="relative z-10 flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-[#0f172a]/95 backdrop-blur-xl">
+              
+              <!-- Save to Q&A Button -->
+              <button id="toolbar-btn-save" class="w-7 h-7 rounded-full flex items-center justify-center hover:bg-gray-700/50 transition-all cursor-pointer" title="Save to QnA Library (with Screenshot)">
+                <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="#818cf8" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M19 21l-7-5-7 5V5a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"></path>
+                </svg>
+              </button>
+
+              <!-- Google Search Button -->
+              <button id="toolbar-btn-google" class="w-7 h-7 rounded-full flex items-center justify-center hover:bg-gray-700/50 transition-all cursor-pointer" title="Search on Google">
+                <svg viewBox="0 0 24 24" width="16" height="16">
+                  <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+                  <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+                  <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+                  <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+                </svg>
+              </button>
+
+              <!-- Claude Button -->
+              <button id="toolbar-btn-claude" class="w-7 h-7 rounded-full flex items-center justify-center hover:bg-gray-700/50 transition-all cursor-pointer" title="Ask Claude">
+                <svg width="16" height="16" viewBox="0 0 256 257" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M50.2278481,170.321013 L100.585316,142.063797 L101.427848,139.601013 L100.585316,138.24 L98.1225316,138.24 L89.6972152,137.721519 L60.921519,136.943797 L35.9696203,135.906835 L11.795443,134.610633 L5.70329114,133.31443 L0,125.796456 L0.583291139,122.037468 L5.70329114,118.602532 L13.0268354,119.250633 L29.2293671,120.352405 L53.5331646,122.037468 L71.161519,123.07443 L97.28,125.796456 L101.427848,125.796456 L102.011139,124.111392 L100.585316,123.07443 L99.4835443,122.037468 L74.3372152,104.992405 L47.116962,86.9751899 L32.8587342,76.6055696 L25.1463291,71.3559494 L21.2577215,66.4303797 L19.5726582,55.6718987 L26.5721519,47.9594937 L35.9696203,48.6075949 L38.3675949,49.2556962 L47.8946835,56.5792405 L68.2450633,72.3281013 L94.8172152,91.9007595 L98.7058228,95.1412658 L100.261266,94.0394937 L100.455696,93.2617722 L98.7058228,90.3453165 L84.2531646,64.2268354 L68.8283544,37.6546835 L61.958481,26.636962 L60.1437975,20.0263291 C59.4956962,17.3043038 59.0420253,15.0359494 59.0420253,12.2491139 L67.0136709,1.42582278 L71.4207595,-1.42108547e-14 L82.0496203,1.42582278 L86.521519,5.31443038 L93.1321519,20.4151899 L103.825823,44.2005063 L120.417215,76.5407595 L125.277975,86.1326582 L127.87038,95.0116456 L128.842532,97.7336709 L130.527595,97.7336709 L130.527595,96.1782278 L131.888608,77.9665823 L134.416203,55.6070886 L136.878987,26.8313924 L137.721519,18.7301266 L141.739747,9.00860759 L149.711392,3.75898734 L155.933165,6.74025316 L161.053165,14.0637975 L160.340253,18.7949367 L157.294177,38.5620253 L151.331646,69.5412658 L147.443038,90.2805063 L149.711392,90.2805063 L152.303797,87.6881013 L162.803038,73.7539241 L180.431392,51.718481 L188.208608,42.9691139 L197.282025,33.3124051 L203.114937,28.7108861 L214.132658,28.7108861 L222.233924,40.7655696 L218.604557,53.2091139 L207.262785,67.596962 L197.865316,79.7812658 L184.38481,97.9281013 L175.959494,112.44557 L176.737215,113.612152 L178.746329,113.417722 L209.207089,106.936709 L225.668861,103.955443 L245.306329,100.585316 L254.185316,104.733165 L255.157468,108.945823 L251.657722,117.56557 L230.659241,122.75038 L206.031392,127.675949 L169.348861,136.360506 L168.89519,136.684557 L169.413671,137.332658 L185.940253,138.888101 L193.004557,139.276962 L210.308861,139.276962 L242.519494,141.674937 L250.94481,147.248608 L256,154.053671 L255.157468,159.238481 L242.195443,165.849114 L224.696709,161.701266 L183.866329,151.979747 L169.867342,148.48 L167.923038,148.48 L167.923038,149.646582 L179.588861,161.053165 L200.976203,180.366582 L227.742785,205.253671 L229.103797,211.410633 L225.668861,216.271392 L222.039494,215.752911 L198.513418,198.059747 L189.44,190.088101 L168.89519,172.783797 L167.534177,172.783797 L167.534177,174.598481 L172.265316,181.533165 L197.282025,219.123038 L198.578228,230.659241 L196.763544,234.418228 L190.282532,236.686582 L183.153418,235.39038 L168.506329,214.84557 L153.40557,191.708354 L141.221266,170.969114 L139.730633,171.811646 L132.536709,249.259747 L129.166582,253.213165 L121.389367,256.19443 L114.908354,251.268861 L111.473418,243.297215 L114.908354,227.548354 L119.056203,207.003544 L122.426329,190.671392 L125.472405,170.385823 L127.287089,163.64557 L127.157468,163.191899 L125.666835,163.386329 L110.371646,184.38481 L87.1048101,215.817722 L68.6987342,235.52 L64.2916456,237.269873 L56.6440506,233.316456 L57.356962,226.252152 L61.6344304,219.96557 L87.1048101,187.560506 L102.46481,167.469367 L112.380759,155.868354 L112.315949,154.183291 L111.732658,154.183291 L44.0708861,198.124557 L32.0162025,199.68 L26.8313924,194.819241 L27.4794937,186.847595 L29.9422785,184.25519 L50.2926582,170.256203 L50.2278481,170.321013 Z" fill="#D97757"></path>
+                </svg>
+              </button>
+
+              <!-- ChatGPT Button -->
+              <button id="toolbar-btn-chatgpt" class="w-7 h-7 rounded-full flex items-center justify-center hover:bg-gray-700/50 transition-all cursor-pointer text-white" title="Ask ChatGPT">
+                <svg fill="currentColor" fill-rule="evenodd" height="16" viewBox="0 0 24 24" width="16" xmlns="http://www.w3.org/2000/svg"><title>OpenAI</title><path d="M9.205 8.658v-2.26c0-.19.072-.333.238-.428l4.543-2.616c.619-.357 1.356-.523 2.117-.523 2.854 0 4.662 2.212 4.662 4.566 0 .167 0 .357-.024.547l-4.71-2.759a.8.8 0 0 0-.856 0zm10.609 8.8V12.06c0-.333-.143-.57-.429-.737l-5.97-3.473 1.95-1.118a.43.43 0 0 1 .476 0l4.543 2.617c1.309.76 2.189 2.378 2.189 3.948 0 1.808-1.07 3.473-2.76 4.163zM7.802 12.703l-1.95-1.142a.45.45 0 0 1-.239-.428V5.899c0-2.545 1.95-4.472 4.591-4.472 1 0 1.927.333 2.712.928L8.23 5.067c-.285.166-.428.404-.428.737zM12 15.128l-2.795-1.57v-3.33L12 8.658l2.795 1.57v3.33zm1.796 7.23c-1 0-1.927-.332-2.712-.927l4.686-2.712c.285-.166.428-.404.428-.737v-6.898l1.974 1.142c.167.095.238.238.238.428v5.233c0 2.545-1.974 4.472-4.614 4.472zm-5.637-5.303-4.544-2.617c-1.308-.761-2.188-2.378-2.188-3.948A4.48 4.48 0 0 1 4.21 6.327v5.423c0 .333.143.571.428.738l5.947 3.449-1.95 1.118a.43.43 0 0 1-.476 0m-.262 3.9c-2.688 0-4.662-2.021-4.662-4.519 0-.19.024-.38.047-.57l4.686 2.71a.79.79 0 0 0 .856 0l5.97-3.448v2.26c0 .19-.07.333-.237.428l-4.543 2.616c-.619.357-1.356.523-2.117.523m5.899 2.83a5.95 5.95 0 0 0 5.827-4.756C22.287 18.339 24 15.84 24 13.296c0-1.665-.713-3.282-1.998-4.448.119-.5.19-.999.19-1.498 0-3.401-2.759-5.947-5.946-5.946a5.7 5.7 0 0 0-1.88.31A5.96 5.96 0 0 0 10.205 0a5.95 5.95 0 0 0-5.827 4.757C1.713 5.447 0 7.945 0 10.49c0 1.666.713 3.283 1.998 4.448-.119.5-.19 1-.19 1.499 0 3.401 2.759 5.946 5.946 5.946.642 0 1.26-.095 1.88-.309a5.96 5.96 0 0 0 4.162 1.713z"/></svg>
+              </button>
+
+            </div>
+          </div>
+
+          <!-- HIGHLIGHTED SELECTED TEXT "Personal Second Brain." -->
+          
+        </span>
+      </h1>
+
+      <!-- Subheadline -->
+      <p class="text-base sm:text-xl text-gray-300 max-w-2xl mx-auto leading-relaxed font-normal">
+        Select text, code snippets, or articles across the web. Save exact portions as Q&A cards with visual PNG screenshots, auto-domain folders, and local browser AI search.
+      </p>
+
+      <!-- Action Buttons -->
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+        <a href="https://chromewebstore.google.com/detail/select-and-save" 
+           target="_blank"
+           rel="noopener noreferrer"
+           class="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-black font-display font-bold text-base hover:bg-gray-100 hover:scale-105 active:scale-95 transition-all shadow-2xl shadow-white/20 flex items-center justify-center gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-emerald-600" viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 8v8m-4-4h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span>Add to Chrome — Free</span>
+        </a>
+
+        <a href="#bento" 
+           class="w-full sm:w-auto px-8 py-4 rounded-full glass-card text-white border border-white/20 font-display font-semibold text-base hover:bg-white/10 hover:border-white/40 transition-all">
+          Explore Superpowers ↓
+        </a>
+      </div>
+
+      <!-- Feature Pill Badges -->
+      <div class="pt-6 flex flex-wrap items-center justify-center gap-3 text-xs font-mono text-gray-300">
+        <span class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full glass-card border border-white/20">
+          <span class="text-emerald-400 font-bold">✓</span> 100% Local Storage
+        </span>
+        <span class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full glass-card border border-white/20">
+          <span class="text-emerald-400 font-bold">✓</span> Sub-50ms Local AI
+        </span>
+        <span class="flex items-center gap-1.5 px-3.5 py-1.5 rounded-full glass-card border border-white/20">
+          <span class="text-emerald-400 font-bold">✓</span> Zero Subscription Fees
+        </span>
+      </div>
+
+    </div>
+
+
+  </section>
+
+  <!-- ASYMMETRIC BENTO GRID SHOWCASE -->
+  <section id="bento" class="py-24 border-t border-white/10 bg-[#060608] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      <div class="text-center space-y-4 max-w-3xl mx-auto">
+        <span class="text-xs font-mono uppercase text-[#00d2ff] tracking-widest px-3 py-1 rounded-full bg-[#00d2ff]/10 border border-[#00d2ff]/20">
+          Feature Matrix & Superpowers
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-display font-bold text-white tracking-tight">
+          Engineered for Active Research & Instant Recall
+        </h2>
+        <p class="text-base text-gray-400">
+          Explore the asymmetric feature suite that makes Select & Save superior to traditional bookmark clippers.
+        </p>
+      </div>
+
+      <BentoGrid />
+
+    </div>
+  </section>
+
+  <!-- INTERACTIVE WORKFLOW SWITCHER -->
+  <section id="workflow" class="py-24 border-t border-white/10 bg-[#08080c] relative">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16">
+      
+      <div class="text-center space-y-4 max-w-3xl mx-auto">
+        <span class="text-xs font-mono uppercase text-[#8b5cf6] tracking-widest px-3 py-1 rounded-full bg-[#8b5cf6]/10 border border-[#8b5cf6]/20">
+          Interactive Workflow
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-display font-bold text-white tracking-tight">
+          How Select & Save Supercharges Your Browsing
+        </h2>
+      </div>
+
+      <InteractiveWorkflow />
+
+    </div>
+  </section>
+
+  <!-- COMPETITOR COMPARISON SECTION -->
+  <section class="py-24 border-t border-white/10 bg-[#060608]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center space-y-4 max-w-3xl mx-auto">
+        <span class="text-xs font-mono uppercase text-emerald-400 tracking-widest px-3 py-1 rounded-full bg-emerald-400/10 border border-emerald-400/20">
+          Head-to-Head Comparison
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-display font-bold text-white tracking-tight">
+          Select & Save vs Competitors
+        </h2>
+        <p class="text-base text-gray-400">
+          See why researchers and developers are switching from heavy cloud bookmarkers to local-first snippet clipping.
+        </p>
+      </div>
+
+      <ComparisonTable />
+
+      <div class="text-center pt-4">
+        <a href="/compare" class="inline-flex items-center gap-2 px-6 py-3 rounded-full glass-card text-[#00d2ff] border border-[#00d2ff]/30 font-semibold text-sm hover:bg-[#00d2ff]/10 transition-all">
+          <span>Read Full Competitor Teardowns (Raindrop, Omnivore, Anybox, Webbites) →</span>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- FAQ SECTION -->
+  <section class="py-24 border-t border-white/10 bg-[#08080c]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+      
+      <div class="text-center space-y-4 max-w-3xl mx-auto">
+        <span class="text-xs font-mono uppercase text-gray-400 tracking-widest px-3 py-1 rounded-full glass-card border border-white/10">
+          Frequently Asked Questions
+        </span>
+        <h2 class="text-3xl sm:text-5xl font-display font-bold text-white tracking-tight">
+          Got Questions? We Have Answers.
+        </h2>
+      </div>
+
+      <FaqAccordion />
+
+    </div>
+  </section>
+
+  <!-- FINAL CALL TO ACTION BAND -->
+  <section class="py-28 border-t border-white/10 mesh-gradient-bg text-center relative overflow-hidden">
+    <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
+      
+      <h2 class="text-4xl sm:text-6xl font-display font-bold text-white tracking-tight leading-tight text-shimmer">
+        Transform the Web into Your Personal Knowledge Engine
+      </h2>
+
+      <p class="text-lg text-gray-400 max-w-2xl mx-auto">
+        Install Select & Save today. Highlight web text, save code snippets as Q&A cards, and query your library privately with on-device Chrome AI.
+      </p>
+
+      <div class="pt-4 flex flex-col sm:flex-row items-center justify-center gap-4">
+        <a href="https://chromewebstore.google.com/detail/select-and-save" 
+           target="_blank"
+           rel="noopener noreferrer"
+           class="px-8 py-4 rounded-full bg-white text-black font-display font-bold text-base hover:bg-gray-100 hover:scale-105 active:scale-95 transition-all shadow-2xl shadow-white/20 flex items-center justify-center gap-3">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 text-emerald-600" viewBox="0 0 24 24" fill="currentColor">
+            <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+            <path d="M12 8v8m-4-4h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span>Add to Chrome — 100% Free</span>
+        </a>
+
+        <a href="/privacy" class="px-8 py-4 rounded-full glass-card text-gray-300 border border-white/10 font-display font-semibold text-base hover:text-white hover:border-white/20 transition-all">
+          Read Privacy Commitment
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+</Layout>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Toolbar button actions
+    document.getElementById('toolbar-btn-save')?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      alert('⚡ Select & Save: "Personal Second Brain" saved to your local Q&A Library with auto PNG screenshot!');
+    });
+
+    document.getElementById('toolbar-btn-google')?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      window.open('https://www.google.com/search?q=Personal+Second+Brain', '_blank');
+    });
+
+    document.getElementById('toolbar-btn-claude')?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      window.open('https://claude.ai', '_blank');
+    });
+
+    document.getElementById('toolbar-btn-chatgpt')?.addEventListener('click', (e) => {
+      e.stopPropagation();
+      window.open('https://chatgpt.com', '_blank');
+    });
+  });
+</script>

@@ -1,0 +1,110 @@
+---
+export interface Props {
+  title?: string;
+  description?: string;
+  image?: string;
+  canonicalUrl?: string;
+  type?: 'website' | 'article';
+  publishedDate?: string;
+  author?: string;
+  keywords?: string[];
+  jsonLd?: object | object[];
+}
+
+const {
+  title = "Select & Save — Save Web Text, Code & Screenshots with On-Device AI",
+  description = "Select text from any webpage and instantly save it as Q&A knowledge cards with automatic visual PNG screenshots, deep-link navigation, and 100% private local Chrome AI.",
+  image = "https://select-and-save.bunnycal.com/og-image.png",
+  canonicalUrl = Astro.url.href,
+  type = "website",
+  publishedDate,
+  author = "Select & Save Team",
+  keywords = [
+    "Web Snippet Saver",
+    "web snippet saver",
+    "website snippet saver",
+    "save web snippets",
+    "save website snippets",
+    "save snippets from websites",
+    "web snippet collector",
+    "Web Clipper",
+    "web clipper extension",
+    "Chrome web clipper",
+    "save selected text from webpage",
+    "save highlighted text",
+    "Q&A saver",
+    "Q&A Chrome extension",
+    "AI search Chrome extension",
+    "personal knowledge management extension",
+    "raindrop alternative",
+    "omnivore alternative"
+  ],
+  jsonLd
+} = Astro.props;
+
+const siteName = "Select & Save";
+
+// Default SoftwareApplication Schema
+const defaultSoftwareSchema = {
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Select & Save",
+  "operatingSystem": "Chrome, Edge, Brave, Opera, Arc (Chromium Browsers)",
+  "applicationCategory": "ProductivityApplication",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "description": description,
+  "url": "https://select-and-save.bunnycal.com",
+  "author": {
+    "@type": "Organization",
+    "name": "Select & Save",
+    "url": "https://select-and-save.bunnycal.com"
+  }
+};
+
+const finalJsonLd = jsonLd || defaultSoftwareSchema;
+---
+
+<!-- Global Metadata & Icons -->
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<link rel="shortcut icon" href="/favicon.ico" />
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+<meta name="apple-mobile-web-app-title" content="S & S" />
+<link rel="manifest" href="/site.webmanifest" />
+<link rel="canonical" href={canonicalUrl} />
+<meta name="generator" content={Astro.generator} />
+
+<!-- Primary Meta Tags -->
+<title>{title}</title>
+<meta name="title" content={title} />
+<meta name="description" content={description} />
+<meta name="keywords" content={keywords.join(', ')} />
+<meta name="author" content={author} />
+<meta name="robots" content="index, follow" />
+
+<!-- Open Graph / Facebook -->
+<meta property="og:type" content={type} />
+<meta property="og:url" content={canonicalUrl} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={image} />
+<meta property="og:site_name" content={siteName} />
+
+<!-- Twitter -->
+<meta property="twitter:card" content="summary_large_image" />
+<meta property="twitter:url" content={canonicalUrl} />
+<meta property="twitter:title" content={title} />
+<meta property="twitter:description" content={description} />
+<meta property="twitter:image" content={image} />
+
+{publishedDate && <meta property="article:published_time" content={publishedDate} />}
+
+<!-- Structured Data / JSON-LD -->
+<script type="application/ld+json" is:inline set:html={JSON.stringify(finalJsonLd)} />
+

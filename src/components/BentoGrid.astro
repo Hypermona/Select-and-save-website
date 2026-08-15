@@ -1,0 +1,208 @@
+---
+---
+<div class="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+  
+  <!-- TILE 1: Large 2x2 Centerpiece (Q&A Generator) -->
+  <div class="md:col-span-2 lg:col-span-2 md:row-span-2 rounded-3xl p-8 relative overflow-hidden group flex flex-col justify-between border border-[#00d2ff]/40 bg-gradient-to-br from-[#00d2ff]/20 via-[#0e1017] to-[#8b5cf6]/15 backdrop-blur-xl shadow-2xl shadow-[#00d2ff]/10 hover:border-[#00d2ff] hover:shadow-[#00d2ff]/25 transition-all duration-300">
+    <div class="absolute -right-20 -bottom-20 w-80 h-80 bg-[#00d2ff]/20 blur-3xl rounded-full pointer-events-none"></div>
+
+    <div class="space-y-4 relative z-10">
+      <div class="flex items-center justify-between">
+        <span class="px-3.5 py-1 rounded-full text-xs font-mono font-bold uppercase bg-[#00d2ff]/20 text-[#00d2ff] border border-[#00d2ff]/40 shadow-sm">
+          ✨ Q&A MAKER
+        </span>
+        <span class="text-3xl">✂️</span>
+      </div>
+
+      <h3 class="text-2xl md:text-4xl font-display font-bold text-white tracking-tight leading-tight">
+        Bookmark Snippets, <br />Not Full Pages
+      </h3>
+
+      <p class="text-sm text-gray-300 leading-relaxed max-w-lg">
+        Stop cluttering your library with 30-page article links. Highlight exact 2-line code blocks, definition tables, or quotes and convert them into structured Q&A flashcards instantly.
+      </p>
+    </div>
+
+    <!-- Live Preview Card Widget Inside Tile 1 -->
+    <div class="mt-8 p-5 rounded-2xl bg-[#08090d]/90 border border-[#00d2ff]/30 space-y-3 relative z-10 shadow-xl">
+      <div class="flex items-center justify-between text-xs font-mono text-gray-400 border-b border-white/10 pb-2">
+        <span class="text-emerald-400 font-bold flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          Auto-Converted Flashcard
+        </span>
+        <span class="text-[#00d2ff]">github.com/react/core</span>
+      </div>
+      
+      <div class="space-y-2 text-xs">
+        <div class="text-white font-bold">Q: What is state in React components?</div>
+        <div class="text-[#00d2ff] font-mono p-3 rounded-xl bg-gradient-to-r from-[#0e1017] to-[#161926] border border-[#00d2ff]/30">
+          "Components often need to change what's on the screen as a result of an interaction..."
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- TILE 2: Tall Spotlight Tile (Chrome Local AI Gemini Nano) -->
+  <div class="md:col-span-1 lg:col-span-2 rounded-3xl p-8 relative overflow-hidden group flex flex-col justify-between border border-[#8b5cf6]/40 bg-gradient-to-br from-[#8b5cf6]/25 via-[#0e1017] to-[#ec4899]/15 backdrop-blur-xl shadow-2xl shadow-[#8b5cf6]/10 hover:border-[#8b5cf6] hover:shadow-[#8b5cf6]/25 transition-all duration-300">
+    <div class="absolute -left-16 -top-16 w-64 h-64 bg-[#8b5cf6]/25 blur-3xl rounded-full pointer-events-none"></div>
+
+    <div class="space-y-4 relative z-10">
+      <div class="flex items-center justify-between">
+        <span class="px-3.5 py-1 rounded-full text-xs font-mono font-bold uppercase bg-[#8b5cf6]/20 text-[#c084fc] border border-[#8b5cf6]/40 shadow-sm flex items-center gap-1.5">
+          <svg viewBox="0 0 24 24" class="w-3.5 h-3.5 shrink-0" fill="none">
+            <path d="M12 24C12 17.3726 17.3726 12 24 12C17.3726 12 12 6.62742 12 0C12 6.62742 6.62742 12 0 12C6.62742 12 12 17.3726 12 24Z" fill="url(#bento-gemini-sparkle)"/>
+            <defs>
+              <linearGradient id="bento-gemini-sparkle" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#1A73E8"/>
+                <stop offset="0.5" stop-color="#8A2BE2"/>
+                <stop offset="1" stop-color="#E8710A"/>
+              </linearGradient>
+            </defs>
+          </svg>
+          <span>GEMINI NANO</span>
+        </span>
+        <span class="text-3xl">🧠</span>
+      </div>
+
+      <h3 class="text-2xl md:text-3xl font-display font-bold text-white tracking-tight">
+        On-Device Chrome AI Search
+      </h3>
+
+      <p class="text-sm text-gray-300 leading-relaxed">
+        Query your saved library in natural language offline using Chrome's built-in AI (Prompt API). Sub-50ms latency with zero API fees or cloud dependencies.
+      </p>
+    </div>
+
+    <div class="mt-6 p-4 rounded-2xl bg-[#08090d]/90 border border-[#8b5cf6]/30 space-y-2 text-xs font-mono">
+      <div class="text-gray-400 flex items-center justify-between">
+        <span>Prompt API: window.ai.languageModel</span>
+        <span class="text-emerald-400 font-bold">100% Offline</span>
+      </div>
+      <div class="text-white font-semibold">User: "Find all CSS flexbox snippets"</div>
+      <div class="text-[#c084fc]">→ Found 4 matching code cards instantly with visual PNG crops</div>
+    </div>
+  </div>
+
+  <!-- TILE 3: Square Tile (Deep Link Text Fragment) -->
+  <div class="rounded-3xl p-6 relative overflow-hidden group flex flex-col justify-between border border-[#ec4899]/40 bg-gradient-to-br from-[#ec4899]/20 via-[#0e1017] to-[#f472b6]/10 backdrop-blur-xl shadow-xl hover:border-[#ec4899] hover:shadow-[#ec4899]/20 transition-all duration-300">
+    <div class="space-y-3 relative z-10">
+      <div class="flex items-center justify-between">
+        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold uppercase bg-[#ec4899]/20 text-[#f472b6] border border-[#ec4899]/40">
+          DEEP LINK
+        </span>
+        <span class="text-2xl">🔗</span>
+      </div>
+
+      <h3 class="text-xl font-display font-bold text-white tracking-tight">
+        Scroll & Re-Highlight
+      </h3>
+
+      <p class="text-xs text-gray-300 leading-relaxed">
+        Clicking 'Open Original Webpage' auto-scrolls to and re-highlights your exact quote on the live page.
+      </p>
+    </div>
+
+    <div class="mt-4 p-3 rounded-xl bg-[#08090d] border border-[#ec4899]/30 text-[11px] font-mono text-[#f472b6] truncate">
+      url.com/#:~:text=saved_quote
+    </div>
+  </div>
+
+  <!-- TILE 4: Square Tile (100% Local Privacy) -->
+  <div class="rounded-3xl p-6 relative overflow-hidden group flex flex-col justify-between border border-emerald-500/40 bg-gradient-to-br from-emerald-500/20 via-[#0e1017] to-teal-500/10 backdrop-blur-xl shadow-xl hover:border-emerald-400 hover:shadow-emerald-500/20 transition-all duration-300">
+    <div class="space-y-3 relative z-10">
+      <div class="flex items-center justify-between">
+        <span class="px-2.5 py-0.5 rounded-full text-[10px] font-mono font-bold uppercase bg-emerald-500/20 text-emerald-300 border border-emerald-500/40">
+          PRIVACY-FIRST
+        </span>
+        <span class="text-2xl">🔒</span>
+      </div>
+
+      <h3 class="text-xl font-display font-bold text-white tracking-tight">
+        100% Local Storage
+      </h3>
+
+      <p class="text-xs text-gray-300 leading-relaxed">
+        Stored in chrome.storage.local & IndexedDB. Zero cloud tracking, zero remote server data selling.
+      </p>
+    </div>
+
+    <div class="mt-4 p-3 rounded-xl bg-[#08090d] border border-emerald-500/30 flex items-center justify-between text-xs text-emerald-400 font-mono">
+      <span>Local Storage</span>
+      <span class="font-bold">100% Private</span>
+    </div>
+  </div>
+
+  <!-- TILE 5: Wide Tile (Select & Instant Multi-Search Bar) -->
+  <div class="md:col-span-2 lg:col-span-2 rounded-3xl p-8 relative overflow-hidden group flex flex-col justify-between border border-[#3b82f6]/40 bg-gradient-to-br from-[#3b82f6]/20 via-[#0e1017] to-[#f59e0b]/15 backdrop-blur-xl shadow-xl hover:border-[#3b82f6] hover:shadow-[#3b82f6]/20 transition-all duration-300">
+    <div class="space-y-4 relative z-10">
+      <div class="flex items-center justify-between">
+        <span class="px-3.5 py-1 rounded-full text-xs font-mono font-bold uppercase bg-[#3b82f6]/20 text-[#60a5fa] border border-[#3b82f6]/40">
+          INSTANT MULTI-SEARCH
+        </span>
+        <span class="text-3xl">⚡</span>
+      </div>
+
+      <h3 class="text-2xl font-display font-bold text-white tracking-tight">
+        Select & Instant Search Overlay
+      </h3>
+
+      <p class="text-sm text-gray-300 leading-relaxed">
+        Highlight any word or snippet on any webpage to trigger a floating quick action bar. Search Google, ChatGPT, or Claude with 1 click right over your selection.
+      </p>
+    </div>
+
+    <div class="mt-6 flex flex-wrap items-center gap-2.5 p-3.5 rounded-2xl bg-[#08090d] border border-[#3b82f6]/30">
+      <span class="text-xs font-mono text-gray-400 mr-1">1-Click Overlay:</span>
+      <span class="px-3.5 py-1.5 rounded-full bg-[#161926] text-white text-xs font-bold border border-white/10 shadow flex items-center gap-1.5">
+        <svg viewBox="0 0 24 24" class="w-3.5 h-3.5 shrink-0">
+          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+          <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+        </svg>
+        <span>Google</span>
+      </span>
+      <span class="px-3.5 py-1.5 rounded-full bg-[#161926] text-emerald-400 text-xs font-bold border border-emerald-500/30 shadow flex items-center gap-1.5">
+        <svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5 text-emerald-400 shrink-0">
+          <path d="M9.205 8.658v-2.26c0-.19.072-.333.238-.428l4.543-2.616c.619-.357 1.356-.523 2.117-.523 2.854 0 4.662 2.212 4.662 4.566 0 .167 0 .357-.024.547l-4.71-2.759a.8.8 0 0 0-.856 0zm10.609 8.8V12.06c0-.333-.143-.57-.429-.737l-5.97-3.473 1.95-1.118a.43.43 0 0 1 .476 0l4.543 2.617c1.309.76 2.189 2.378 2.189 3.948 0 1.808-1.07 3.473-2.76 4.163zM7.802 12.703l-1.95-1.142a.45.45 0 0 1-.239-.428V5.899c0-2.545 1.95-4.472 4.591-4.472 1 0 1.927.333 2.712.928L8.23 5.067c-.285.166-.428.404-.428.737zM12 15.128l-2.795-1.57v-3.33L12 8.658l2.795 1.57v3.33zm1.796 7.23c-1 0-1.927-.332-2.712-.927l4.686-2.712c.285-.166.428-.404.428-.737v-6.898l1.974 1.142c.167.095.238.238.238.428v5.233c0 2.545-1.974 4.472-4.614 4.472zm-5.637-5.303-4.544-2.617c-1.308-.761-2.188-2.378-2.188-3.948A4.48 4.48 0 0 1 4.21 6.327v5.423c0 .333.143.571.428.738l5.947 3.449-1.95 1.118a.43.43 0 0 1-.476 0m-.262 3.9c-2.688 0-4.662-2.021-4.662-4.519 0-.19.024-.38.047-.57l4.686 2.71a.79.79 0 0 0 .856 0l5.97-3.448v2.26c0 .19-.07.333-.237.428l-4.543 2.616c-.619.357-1.356.523-2.117.523m5.899 2.83a5.95 5.95 0 0 0 5.827-4.756C22.287 18.339 24 15.84 24 13.296c0-1.665-.713-3.282-1.998-4.448.119-.5.19-.999.19-1.498 0-3.401-2.759-5.947-5.946-5.946a5.7 5.7 0 0 0-1.88.31A5.96 5.96 0 0 0 10.205 0a5.95 5.95 0 0 0-5.827 4.757C1.713 5.447 0 7.945 0 10.49c0 1.666.713 3.283 1.998 4.448-.119.5-.19 1-.19 1.499 0 3.401 2.759 5.946 5.946 5.946.642 0 1.26-.095 1.88-.309a5.96 5.96 0 0 0 4.162 1.713z"/>
+        </svg>
+        <span>ChatGPT</span>
+      </span>
+      <span class="px-3.5 py-1.5 rounded-full bg-[#161926] text-amber-400 text-xs font-bold border border-amber-500/30 shadow flex items-center gap-1.5">
+        <svg viewBox="0 0 256 257" class="w-3.5 h-3.5 shrink-0">
+          <path d="M50.2278481,170.321013 L100.585316,142.063797 L101.427848,139.601013 L100.585316,138.24 L98.1225316,138.24 L89.6972152,137.721519 L60.921519,136.943797 L35.9696203,135.906835 L11.795443,134.610633 L5.70329114,133.31443 L0,125.796456 L0.583291139,122.037468 L5.70329114,118.602532 L13.0268354,119.250633 L29.2293671,120.352405 L53.5331646,122.037468 L71.161519,123.07443 L97.28,125.796456 L101.427848,125.796456 L102.011139,124.111392 L100.585316,123.07443 L99.4835443,122.037468 L74.3372152,104.992405 L47.116962,86.9751899 L32.8587342,76.6055696 L25.1463291,71.3559494 L21.2577215,66.4303797 L19.5726582,55.6718987 L26.5721519,47.9594937 L35.9696203,48.6075949 L38.3675949,49.2556962 L47.8946835,56.5792405 L68.2450633,72.3281013 L94.8172152,91.9007595 L98.7058228,95.1412658 L100.261266,94.0394937 L100.455696,93.2617722 L98.7058228,90.3453165 L84.2531646,64.2268354 L68.8283544,37.6546835 L61.958481,26.636962 L60.1437975,20.0263291 C59.4956962,17.3043038 59.0420253,15.0359494 59.0420253,12.2491139 L67.0136709,1.42582278 L71.4207595,-1.42108547e-14 L82.0496203,1.42582278 L86.521519,5.31443038 L93.1321519,20.4151899 L103.825823,44.2005063 L120.417215,76.5407595 L125.277975,86.1326582 L127.87038,95.0116456 L128.842532,97.7336709 L130.527595,97.7336709 L130.527595,96.1782278 L131.888608,77.9665823 L134.416203,55.6070886 L136.878987,26.8313924 L137.721519,18.7301266 L141.739747,9.00860759 L149.711392,3.75898734 L155.933165,6.74025316 L161.053165,14.0637975 L160.340253,18.7949367 L157.294177,38.5620253 L151.331646,69.5412658 L147.443038,90.2805063 L149.711392,90.2805063 L152.303797,87.6881013 L162.803038,73.7539241 L180.431392,51.718481 L188.208608,42.9691139 L197.282025,33.3124051 L203.114937,28.7108861 L214.132658,28.7108861 L222.233924,40.7655696 L218.604557,53.2091139 L207.262785,67.596962 L197.865316,79.7812658 L184.38481,97.9281013 L175.959494,112.44557 L176.737215,113.612152 L178.746329,113.417722 L209.207089,106.936709 L225.668861,103.955443 L245.306329,100.585316 L254.185316,104.733165 L255.157468,108.945823 L251.657722,117.56557 L230.659241,122.75038 L206.031392,127.675949 L169.348861,136.360506 L168.89519,136.684557 L169.413671,137.332658 L185.940253,138.888101 L193.004557,139.276962 L210.308861,139.276962 L242.519494,141.674937 L250.94481,147.248608 L256,154.053671 L255.157468,159.238481 L242.195443,165.849114 L224.696709,161.701266 L183.866329,151.979747 L169.867342,148.48 L167.923038,148.48 L167.923038,149.646582 L179.588861,161.053165 L200.976203,180.366582 L227.742785,205.253671 L229.103797,211.410633 L225.668861,216.271392 L222.039494,215.752911 L198.513418,198.059747 L189.44,190.088101 L168.89519,172.783797 L167.534177,172.783797 L167.534177,174.598481 L172.265316,181.533165 L197.282025,219.123038 L198.578228,230.659241 L196.763544,234.418228 L190.282532,236.686582 L183.153418,235.39038 L168.506329,214.84557 L153.40557,191.708354 L141.221266,170.969114 L139.730633,171.811646 L132.536709,249.259747 L129.166582,253.213165 L121.389367,256.19443 L114.908354,251.268861 L111.473418,243.297215 L114.908354,227.548354 L119.056203,207.003544 L122.426329,190.671392 L125.472405,170.385823 L127.287089,163.64557 L127.157468,163.191899 L125.666835,163.386329 L110.371646,184.38481 L87.1048101,215.817722 L68.6987342,235.52 L64.2916456,237.269873 L56.6440506,233.316456 L57.356962,226.252152 L61.6344304,219.96557 L87.1048101,187.560506 L102.46481,167.469367 L112.380759,155.868354 L112.315949,154.183291 L111.732658,154.183291 L44.0708861,198.124557 L32.0162025,199.68 L26.8313924,194.819241 L27.4794937,186.847595 L29.9422785,184.25519 L50.2926582,170.256203 L50.2278481,170.321013 Z" fill="#D97757"/>
+        </svg>
+        <span>Claude</span>
+      </span>
+    </div>
+  </div>
+
+  <!-- TILE 6: Wide Tile (Mosaic Masonry & List Views) -->
+  <div class="md:col-span-2 lg:col-span-2 rounded-3xl p-8 relative overflow-hidden group flex flex-col justify-between border border-[#8b5cf6]/40 bg-gradient-to-br from-[#6366f1]/20 via-[#0e1017] to-[#8b5cf6]/20 backdrop-blur-xl shadow-xl hover:border-[#8b5cf6] hover:shadow-[#8b5cf6]/20 transition-all duration-300">
+    <div class="space-y-4 relative z-10">
+      <div class="flex items-center justify-between">
+        <span class="px-3.5 py-1 rounded-full text-xs font-mono font-bold uppercase bg-[#6366f1]/20 text-[#a5b4fc] border border-[#6366f1]/40">
+          CUSTOMIZABLE CANVAS
+        </span>
+        <span class="text-3xl">🎨</span>
+      </div>
+
+      <h3 class="text-2xl font-display font-bold text-white tracking-tight">
+        Mosaic Masonry & Compact List Views
+      </h3>
+
+      <p class="text-sm text-gray-300 leading-relaxed">
+        Visual layout tailored for screenshots, code syntax highlighting, auto-domain folders, and color-coded tag organization.
+      </p>
+    </div>
+
+    <div class="mt-6 flex items-center justify-between p-3.5 rounded-2xl bg-[#08090d] border border-[#8b5cf6]/30 text-xs text-gray-300">
+      <div class="flex items-center gap-3">
+        <span class="px-3.5 py-1.5 rounded-xl bg-gradient-to-r from-[#00d2ff] to-[#8b5cf6] text-white font-bold shadow-md">Mosaic Grid</span>
+        <span class="px-3.5 py-1.5 rounded-xl bg-[#161926] text-gray-300 border border-white/10">Compact List</span>
+      </div>
+      <span class="font-mono text-[#c084fc] font-bold">Auto-Domain Grouping</span>
+    </div>
+  </div>
+
+</div>

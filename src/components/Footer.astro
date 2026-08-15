@@ -1,0 +1,94 @@
+---
+const currentYear = new Date().getFullYear();
+---
+
+<footer class="w-full border-t border-[#262626] bg-[#090909] py-16 text-xs text-[#999999]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
+    
+    <!-- Top Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-5 gap-8">
+      
+      <!-- Brand & Mission Column -->
+      <div class="md:col-span-2 space-y-4">
+        <a href="/" class="flex items-center gap-2">
+          <img src="/favicon.svg" alt="Select & Save Icon" class="w-7 h-7 object-contain" />
+          <span class="font-display font-bold text-white text-base tracking-tight">Select & Save</span>
+        </a>
+        <p class="text-[#999999] leading-relaxed max-w-sm">
+          The ultimate Chrome extension for saving web text, code snippets, visual screenshots, and Q&A notes with 100% private on-device Chrome AI (Gemini Nano).
+        </p>
+        <div class="flex items-center gap-2 pt-2">
+          <span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-[#141414] border border-[#262626] text-[11px] text-emerald-400 font-mono">
+            <span class="w-2 h-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            Domain: select-and-save.bunnycal.com
+          </span>
+        </div>
+      </div>
+
+      <!-- Product Navigation -->
+      <div class="space-y-3">
+        <h3 class="text-white font-semibold text-sm tracking-wide">Product</h3>
+        <ul class="space-y-2">
+          <li><a href="/#features" class="hover:text-white transition-colors">Core Features</a></li>
+          <li><a href="/#usps" class="hover:text-white transition-colors">Unique Superpowers</a></li>
+          <li><a href="/#demo" class="hover:text-white transition-colors">Interactive Action Bar Demo</a></li>
+          <li><a href="/privacy" class="hover:text-white transition-colors">Local Privacy Commitment</a></li>
+          <li><a href="https://chromewebstore.google.com/detail/select-and-save" target="_blank" rel="noopener noreferrer" class="text-[#0099ff] hover:underline">Chrome Web Store</a></li>
+        </ul>
+      </div>
+
+      <!-- Compare vs Competitors -->
+      <div class="space-y-3">
+        <h3 class="text-white font-semibold text-sm tracking-wide">Comparisons</h3>
+        <ul class="space-y-2">
+          <li><a href="/compare" class="hover:text-white transition-colors">Compare Hub</a></li>
+          <li><a href="/compare/raindrop" class="hover:text-white transition-colors">vs Raindrop.io</a></li>
+          <li><a href="/compare/omnivore" class="hover:text-white transition-colors">vs Omnivore.app</a></li>
+          <li><a href="/compare/anybox" class="hover:text-white transition-colors">vs Anybox.app</a></li>
+          <li><a href="/compare/webbites" class="hover:text-white transition-colors">vs Webbites.io</a></li>
+        </ul>
+      </div>
+
+      <!-- Resources & SEO Topics -->
+      <div class="space-y-3">
+        <h3 class="text-white font-semibold text-sm tracking-wide">Resources</h3>
+        <ul class="space-y-2">
+          <li><a href="/blog" class="hover:text-white transition-colors">Blog & Guides</a></li>
+          <li><a href="/blog/chrome-built-in-ai-gemini-nano-local-knowledge-base" class="hover:text-white transition-colors">Chrome AI & Gemini Nano Guide</a></li>
+          <li><a href="/blog/stop-losing-web-highlights-deep-link-text-fragment" class="hover:text-white transition-colors">Deep-Link Text Fragments</a></li>
+          <li><a href="/blog/how-to-organize-web-research-snippets" class="hover:text-white transition-colors">Web Research Organization</a></li>
+          <li><a href="/blog/modern-web-clipper-alternative-speed-privacy" class="hover:text-white transition-colors">Modern Web Clipper 2026</a></li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- SEO Keywords Matrix (Subtle Tag Cloud) -->
+    <div class="border-t border-[#1a1a1a] pt-8 space-y-3">
+      <h4 class="text-[11px] font-mono uppercase text-[#666666] tracking-wider">Target Use Cases & Capabilities</h4>
+      <div class="flex flex-wrap gap-1.5 text-[11px] text-[#777777]">
+        <span class="px-2 py-0.5 rounded bg-[#141414] border border-[#262626]">Web Snippet Saver</span>
+        <span class="px-2 py-0.5 rounded bg-[#141414] border border-[#262626]">Save Selected Text</span>
+        <span class="px-2 py-0.5 rounded bg-[#141414] border border-[#262626]">Q&A Web Clipper</span>
+        <span class="px-2 py-0.5 rounded bg-[#141414] border border-[#262626]">Chrome AI Extension</span>
+        <span class="px-2 py-0.5 rounded bg-[#141414] border border-[#262626]">Instant Search Google, ChatGPT, Claude</span>
+        <span class="px-2 py-0.5 rounded bg-[#141414] border border-[#262626]">Second Brain</span>
+        <span class="px-2 py-0.5 rounded bg-[#141414] border border-[#262626]">Interview Prep Q&A Maker</span>
+        <span class="px-2 py-0.5 rounded bg-[#141414] border border-[#262626]">Read-It-Later Snippet Reader</span>
+        <span class="px-2 py-0.5 rounded bg-[#141414] border border-[#262626]">100% Local Browser Privacy</span>
+        <span class="px-2 py-0.5 rounded bg-[#141414] border border-[#262626]">Raindrop Alternative</span>
+      </div>
+    </div>
+
+    <!-- Copyright & Disclaimer -->
+    <div class="border-t border-[#1a1a1a] pt-8 flex flex-col md:flex-row items-center justify-between gap-4 text-[#777777]">
+      <p>© {currentYear} Select & Save. Hosted on select-and-save.bunnycal.com. All rights reserved.</p>
+      <div class="flex items-center gap-6">
+        <a href="/privacy" class="hover:text-white transition-colors">Privacy Policy</a>
+        <a href="/compare" class="hover:text-white transition-colors">Competitor Analysis</a>
+        <a href="/sitemap.xml" class="hover:text-white transition-colors">Sitemap</a>
+      </div>
+    </div>
+
+  </div>
+</footer>

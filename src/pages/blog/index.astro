@@ -1,0 +1,166 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { getAllPosts } from '../../lib/blogs';
+
+const posts = getAllPosts();
+const featuredPost = posts.find(p => p.slug === 'chrome-built-in-ai-gemini-nano-local-knowledge-base') || posts[0];
+const otherPosts = posts.filter(p => p.slug !== featuredPost.slug);
+
+const categories = Array.from(new Set(posts.map(p => p.category)));
+
+const seoTitle = "Select & Save Blog — Web Research, Local AI & Knowledge Management";
+const seoDesc = "Explore guides, technical deep dives, and tutorials on local Chrome AI (Gemini Nano), URL text fragments, web clipping techniques, and personal knowledge bases.";
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://select-and-save.bunnycal.com" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://select-and-save.bunnycal.com/blog" }
+  ]
+};
+
+const blogHubSchema = {
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Select & Save Blog",
+  "description": seoDesc,
+  "url": "https://select-and-save.bunnycal.com/blog"
+};
+
+const blogHubSchemas = [breadcrumbSchema, blogHubSchema];
+---
+
+<Layout title={seoTitle} description={seoDesc} jsonLd={blogHubSchemas}>
+  <div class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto space-y-16">
+    
+    <!-- Blog Hub Header -->
+    <div class="text-center space-y-4 max-w-3xl mx-auto">
+      <span class="text-xs font-mono uppercase text-[#0099ff] tracking-widest px-3 py-1 rounded-full bg-[#0099ff]/10 border border-[#0099ff]/20">
+        Guides & Insights
+      </span>
+      <h1 class="text-4xl sm:text-6xl font-display font-bold text-white tracking-tight leading-tight">
+        The Select & Save Blog
+      </h1>
+      <p class="text-base sm:text-lg text-[#999999]">
+        Master web snippet collection, local-first browser AI, deep-link text fragment jump, and building your digital second brain.
+      </p>
+    </div>
+
+    <!-- Featured Post Hero Tile -->
+    {featuredPost && (
+      <div class="relative rounded-3xl bg-gradient-to-br from-[#1c1c1c] via-[#141414] to-[#090909] border border-[#6a4cf5]/40 hover:border-[#6a4cf5] transition-all duration-300 p-8 sm:p-12 overflow-hidden group shadow-2xl">
+        <div class="absolute top-0 right-0 w-96 h-96 bg-[#6a4cf5]/15 blur-3xl rounded-full pointer-events-none"></div>
+
+        <div class="relative z-10 max-w-3xl space-y-6">
+          <div class="flex items-center gap-3">
+            <span class="px-3 py-1 rounded-full bg-[#6a4cf5]/20 text-[#6a4cf5] border border-[#6a4cf5]/40 text-xs font-mono font-bold uppercase">
+              Featured Article
+            </span>
+            <span class="text-xs text-[#999999] font-mono">{featuredPost.category} • {featuredPost.readTime}</span>
+          </div>
+
+          <h2 class="text-2xl sm:text-4xl font-display font-bold text-white tracking-tight leading-tight group-hover:text-[#0099ff] transition-colors">
+            <a href={`/blog/${featuredPost.slug}`}>
+              {featuredPost.title}
+            </a>
+          </h2>
+
+          <p class="text-sm sm:text-base text-[#999999] leading-relaxed">
+            {featuredPost.metaDescription}
+          </p>
+
+          <div class="flex items-center justify-between pt-4 border-t border-[#262626]">
+            <div class="flex items-center gap-3 text-xs text-[#999999]">
+              <img src="/favicon.svg" alt="Select & Save Icon" class="w-6 h-6 object-contain" />
+              <span>{featuredPost.author} • {featuredPost.publishedDate}</span>
+            </div>
+
+            <a href={`/blog/${featuredPost.slug}`} class="inline-flex items-center gap-2 text-xs font-bold text-white group-hover:text-[#0099ff] transition-colors">
+              <span>Read Full Guide</span>
+              <span>→</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    )}
+
+    <!-- Category Filter Bar -->
+    <div class="flex flex-wrap items-center justify-center gap-2 pt-4">
+      <span class="text-xs font-mono text-[#999999] mr-2">Filter Topics:</span>
+      <button class="category-btn active px-3.5 py-1.5 rounded-full text-xs font-medium bg-white text-black transition-all cursor-pointer" data-category="all">
+        All Articles ({posts.length})
+      </button>
+      {categories.map(cat => (
+        <button class="category-btn px-3.5 py-1.5 rounded-full text-xs font-medium bg-[#141414] text-[#999999] border border-[#262626] hover:text-white transition-all cursor-pointer" data-category={cat}>
+          {cat}
+        </button>
+      ))}
+    </div>
+
+    <!-- Article Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="articles-grid">
+      {otherPosts.map(post => (
+        <article class="article-card rounded-2xl bg-[#141414] border border-[#262626] hover:border-[#0099ff]/50 transition-all duration-300 p-6 flex flex-col justify-between group space-y-6 hover:-translate-y-1" data-category={post.category}>
+          <div class="space-y-4">
+            <div class="flex items-center justify-between text-xs font-mono text-[#999999]">
+              <span class="px-2.5 py-1 rounded bg-[#090909] text-[#0099ff] border border-[#262626]">
+                {post.category}
+              </span>
+              <span>{post.readTime}</span>
+            </div>
+
+            <h3 class="text-xl font-display font-bold text-white tracking-tight leading-snug group-hover:text-[#0099ff] transition-colors">
+              <a href={`/blog/${post.slug}`}>
+                {post.title}
+              </a>
+            </h3>
+
+            <p class="text-xs sm:text-sm text-[#999999] leading-relaxed line-clamp-3">
+              {post.metaDescription}
+            </p>
+          </div>
+
+          <div class="pt-4 border-t border-[#262626] flex items-center justify-between text-xs text-[#999999]">
+            <span>{post.publishedDate}</span>
+            <a href={`/blog/${post.slug}`} class="font-bold text-white group-hover:text-[#0099ff] transition-colors flex items-center gap-1">
+              <span>Read</span>
+              <span>→</span>
+            </a>
+          </div>
+        </article>
+      ))}
+    </div>
+
+  </div>
+</Layout>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const buttons = document.querySelectorAll('.category-btn');
+    const cards = document.querySelectorAll('.article-card');
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => {
+        const cat = btn.getAttribute('data-category');
+
+        buttons.forEach(b => {
+          b.classList.remove('bg-white', 'text-black');
+          b.classList.add('bg-[#141414]', 'text-[#999999]');
+        });
+
+        btn.classList.remove('bg-[#141414]', 'text-[#999999]');
+        btn.classList.add('bg-white', 'text-black');
+
+        cards.forEach(card => {
+          const cardCat = card.getAttribute('data-category');
+          if (cat === 'all' || cardCat === cat) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      });
+    });
+  });
+</script>

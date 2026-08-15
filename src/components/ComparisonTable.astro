@@ -1,0 +1,163 @@
+---
+const features = [
+  {
+    name: "Bookmark Specific Text & Code Snippets",
+    description: "Save precise portions of a webpage instead of full URL link bloat",
+    selectAndSave: true,
+    raindrop: false,
+    omnivore: "Partial",
+    anybox: false,
+    webbites: true
+  },
+  {
+    name: "Auto-Convert Web Content to Q&A Cards",
+    description: "Structure research and notes into Q&A flashcard format for study & interview prep",
+    selectAndSave: true,
+    raindrop: false,
+    omnivore: false,
+    anybox: false,
+    webbites: false
+  },
+  {
+    name: "100% On-Device Local Privacy",
+    description: "All data stays in your browser; zero cloud telemetry or data selling",
+    selectAndSave: true,
+    raindrop: false,
+    omnivore: false,
+    anybox: "Partial",
+    webbites: false
+  },
+  {
+    name: "On-Device Chrome AI (Gemini Nano)",
+    description: "Query saved library offline in natural language with sub-50ms latency",
+    selectAndSave: true,
+    raindrop: false,
+    omnivore: false,
+    anybox: false,
+    webbites: false
+  },
+  {
+    name: "Select & Instant Search Overlay",
+    description: "Highlight text on any site to search Google, ChatGPT, Claude, or custom engine in 1 click",
+    selectAndSave: true,
+    raindrop: false,
+    omnivore: false,
+    anybox: false,
+    webbites: false
+  },
+  {
+    name: "Auto-Cropped Visual PNG Screenshots",
+    description: "Extract formatted HTML alongside visual PNG screenshot snippet automatically",
+    selectAndSave: true,
+    raindrop: "Paid Tier",
+    omnivore: false,
+    anybox: false,
+    webbites: false
+  },
+  {
+    name: "Deep-Link Text Fragment Scroll & Re-Highlight",
+    description: "Re-open live URL and automatically jump & highlight original quote",
+    selectAndSave: true,
+    raindrop: false,
+    omnivore: false,
+    anybox: false,
+    webbites: false
+  },
+  {
+    name: "Mosaic Masonry & List Layout Customization",
+    description: "Dynamic responsive grid built for visual snippets, code, and text",
+    selectAndSave: true,
+    raindrop: true,
+    omnivore: false,
+    anybox: true,
+    webbites: "Basic"
+  },
+  {
+    name: "Zero Subscription Fees / 100% Free Forever",
+    description: "No paid paywalls for search, full-text backup, or AI queries",
+    selectAndSave: true,
+    raindrop: false,
+    omnivore: false,
+    anybox: false,
+    webbites: false
+  }
+];
+---
+
+<div class="w-full overflow-x-auto rounded-3xl border border-[#00d2ff]/40 bg-gradient-to-b from-[#0e1017]/90 to-[#08090d]/90 backdrop-blur-xl shadow-2xl">
+  <table class="w-full text-left border-collapse min-w-[700px]">
+    <thead>
+      <tr class="border-b border-white/10 bg-[#161926]/90 text-xs uppercase font-mono tracking-wider">
+        <th class="py-4 px-6 text-white w-1/3">Feature Capability</th>
+        <th class="py-4 px-4 text-[#00d2ff] bg-[#00d2ff]/10 border-x border-[#00d2ff]/30 text-center font-bold">
+          Select & Save ⚡
+        </th>
+        <th class="py-4 px-4 text-gray-400 text-center">Raindrop.io</th>
+        <th class="py-4 px-4 text-gray-400 text-center">Omnivore</th>
+        <th class="py-4 px-4 text-gray-400 text-center">Anybox</th>
+        <th class="py-4 px-4 text-gray-400 text-center">Webbites</th>
+      </tr>
+    </thead>
+    <tbody class="divide-y divide-white/10 text-xs sm:text-sm">
+      {features.map((f, i) => (
+        <tr class={i % 2 === 0 ? 'bg-[#08090d]/40' : 'bg-[#0e1017]/60'}>
+          <td class="py-4 px-6">
+            <div class="font-semibold text-white">{f.name}</div>
+            <div class="text-[11px] text-gray-400 mt-0.5">{f.description}</div>
+          </td>
+          
+          <!-- Select & Save -->
+          <td class="py-4 px-4 bg-[#00d2ff]/10 border-x border-[#00d2ff]/30 text-center font-bold text-emerald-400">
+            {f.selectAndSave === true ? (
+              <span class="inline-flex items-center justify-center w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-300 font-bold">✓</span>
+            ) : f.selectAndSave}
+          </td>
+
+          <!-- Raindrop.io -->
+          <td class="py-4 px-4 text-center text-gray-400">
+            {f.raindrop === true ? (
+              <span class="text-emerald-400 font-bold">✓</span>
+            ) : f.raindrop === false ? (
+              <span class="text-rose-500/60 font-bold">✕</span>
+            ) : (
+              <span class="text-amber-400 text-xs font-semibold">{f.raindrop}</span>
+            )}
+          </td>
+
+          <!-- Omnivore -->
+          <td class="py-4 px-4 text-center text-gray-400">
+            {f.omnivore === true ? (
+              <span class="text-emerald-400 font-bold">✓</span>
+            ) : f.omnivore === false ? (
+              <span class="text-rose-500/60 font-bold">✕</span>
+            ) : (
+              <span class="text-amber-400 text-xs font-semibold">{f.omnivore}</span>
+            )}
+          </td>
+
+          <!-- Anybox -->
+          <td class="py-4 px-4 text-center text-gray-400">
+            {f.anybox === true ? (
+              <span class="text-emerald-400 font-bold">✓</span>
+            ) : f.anybox === false ? (
+              <span class="text-rose-500/60 font-bold">✕</span>
+            ) : (
+              <span class="text-amber-400 text-xs font-semibold">{f.anybox}</span>
+            )}
+          </td>
+
+          <!-- Webbites -->
+          <td class="py-4 px-4 text-center text-gray-400">
+            {f.webbites === true ? (
+              <span class="text-emerald-400 font-bold">✓</span>
+            ) : f.webbites === false ? (
+              <span class="text-rose-500/60 font-bold">✕</span>
+            ) : (
+              <span class="text-amber-400 text-xs font-semibold">{f.webbites}</span>
+            )}
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>

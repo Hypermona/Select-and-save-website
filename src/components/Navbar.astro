@@ -1,0 +1,65 @@
+---
+---
+<header class="sticky top-0 z-50 w-full border-b border-white/10 bg-[#060608]/80 backdrop-blur-xl transition-all">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    
+    <!-- Brand Logo -->
+    <a href="/" class="flex items-center gap-3 group">
+      <img src="/favicon.svg" alt="Select & Save Icon" class="w-9 h-9 object-contain group-hover:scale-105 transition-all drop-shadow-[0_0_12px_rgba(0,210,255,0.4)]" />
+      <div class="flex flex-col">
+        <span class="font-display font-bold text-white text-lg tracking-tight leading-none group-hover:text-[#00d2ff] transition-colors">
+          Select & Save
+        </span>
+        <span class="text-[10px] text-gray-400 font-mono tracking-wider">CHROME EXTENSION</span>
+      </div>
+    </a>
+
+    <!-- Desktop Navigation Links -->
+    <nav class="hidden md:flex items-center gap-7 text-sm font-medium text-gray-400">
+      <a href="/#features" class="hover:text-white transition-colors">Features</a>
+      <a href="/#bento" class="hover:text-white transition-colors">Superpowers</a>
+      <a href="/#workflow" class="hover:text-white transition-colors">How It Works</a>
+      <a href="/compare" class="hover:text-white transition-colors">Compare vs Competitors</a>
+      <a href="/blog" class="hover:text-white transition-colors">Blog</a>
+      <a href="/privacy" class="hover:text-white transition-colors">Privacy</a>
+    </nav>
+
+    <!-- Header Actions -->
+    <div class="flex items-center gap-3">
+      <a href="https://chromewebstore.google.com/detail/select-and-save" 
+         target="_blank" 
+         rel="noopener noreferrer"
+         class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-white text-black font-display font-bold text-xs sm:text-sm tracking-tight hover:bg-gray-100 hover:scale-105 active:scale-95 transition-all shadow-xl shadow-white/10">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4 text-emerald-600" viewBox="0 0 24 24" fill="currentColor">
+          <circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/>
+          <path d="M12 8v8m-4-4h8" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+        </svg>
+        <span>Add to Chrome — Free</span>
+      </a>
+
+      <!-- Mobile Menu Button -->
+      <button id="mobile-menu-btn" class="md:hidden p-2 rounded-xl text-gray-400 hover:text-white hover:bg-[#161622]" aria-label="Toggle Navigation Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+      </button>
+    </div>
+  </div>
+
+  <!-- Mobile Dropdown Navigation -->
+  <div id="mobile-menu" class="hidden md:hidden border-b border-white/10 bg-[#0e0e14] px-4 py-4 space-y-3 text-sm text-gray-400">
+    <a href="/#features" class="block hover:text-white py-1">Features</a>
+    <a href="/#bento" class="block hover:text-white py-1">Superpowers</a>
+    <a href="/#workflow" class="block hover:text-white py-1">How It Works</a>
+    <a href="/compare" class="block hover:text-white py-1">Compare vs Competitors</a>
+    <a href="/blog" class="block hover:text-white py-1">Blog</a>
+    <a href="/privacy" class="block hover:text-white py-1">Privacy Policy</a>
+  </div>
+</header>
+
+<script is:inline>
+  document.getElementById('mobile-menu-btn')?.addEventListener('click', () => {
+    const menu = document.getElementById('mobile-menu');
+    menu?.classList.toggle('hidden');
+  });
+</script>

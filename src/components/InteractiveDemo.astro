@@ -1,0 +1,196 @@
+---
+---
+<div class="relative w-full max-w-4xl mx-auto my-12 rounded-2xl border border-[#262626] bg-[#141414] shadow-2xl overflow-hidden group">
+  <!-- Mock Browser Bar -->
+  <div class="flex items-center justify-between px-4 py-3 border-b border-[#262626] bg-[#1c1c1c]/90">
+    <div class="flex items-center gap-2">
+      <span class="w-3 h-3 rounded-full bg-red-500/80"></span>
+      <span class="w-3 h-3 rounded-full bg-amber-500/80"></span>
+      <span class="w-3 h-3 rounded-full bg-emerald-500/80"></span>
+    </div>
+    
+    <div class="flex items-center gap-2 px-3 py-1 rounded-md bg-[#090909] border border-[#262626] text-xs font-mono text-[#999999] w-3/5 max-w-md truncate">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-emerald-400 shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+        <rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect>
+        <path d="M7 11V7a5 5 0 0 1 10 0v4"></path>
+      </svg>
+      <span class="truncate">https://docs.react.dev/learn/state-a-components-memory</span>
+    </div>
+
+    <div class="flex items-center gap-1.5 text-xs text-[#0099ff] font-medium bg-[#0099ff]/10 px-2.5 py-1 rounded-full border border-[#0099ff]/20">
+      <span class="w-2 h-2 rounded-full bg-[#0099ff] animate-ping"></span>
+      <span>Try Live Demo Below</span>
+    </div>
+  </div>
+
+  <!-- Interactive Sandbox Content -->
+  <div class="p-6 md:p-8 bg-[#090909] relative">
+    
+    <!-- Instruction Pill -->
+    <div class="mb-6 flex flex-wrap items-center justify-between gap-3 p-3 rounded-xl bg-[#141414] border border-[#262626]">
+      <div class="flex items-center gap-2 text-xs text-white">
+        <span class="px-2 py-0.5 rounded bg-[#0099ff] text-black font-bold">Interactive</span>
+        <span>Highlight text below or click any sample quote to test the <strong>Floating Quick Action Bar</strong>:</span>
+      </div>
+      <div class="flex items-center gap-2">
+        <button id="sample-quote-1" class="text-[11px] px-2.5 py-1 rounded-lg bg-[#1c1c1c] text-[#0099ff] border border-[#0099ff]/30 hover:bg-[#0099ff]/20 transition-all cursor-pointer">
+          Select Code Snippet
+        </button>
+        <button id="sample-quote-2" class="text-[11px] px-2.5 py-1 rounded-lg bg-[#1c1c1c] text-[#d44df0] border border-[#d44df0]/30 hover:bg-[#d44df0]/20 transition-all cursor-pointer">
+          Select Tech Definition
+        </button>
+      </div>
+    </div>
+
+    <!-- Article Body with Highlightable Snippets -->
+    <article class="prose prose-invert max-w-none text-gray-300 text-sm md:text-base leading-relaxed space-y-4 font-sans select-text" id="demo-article">
+      <h3 class="text-xl font-bold text-white tracking-tight">Understanding Web State & Personal Knowledge Capture</h3>
+      
+      <p id="snippet-text-1" class="p-3 rounded-lg border border-transparent transition-all hover:border-[#0099ff]/30 hover:bg-[#0099ff]/5">
+        Components often need to change what's on the screen as a result of an interaction. Building a second brain shouldn't require saving whole 20-page articles when all you need is <span class="bg-[#0099ff]/25 text-white font-semibold px-1 rounded inline-highlight">a 2-line code logic block or specific question & answer pair</span>.
+      </p>
+
+      <div id="snippet-text-2" class="p-4 rounded-xl bg-[#141414] border border-[#262626] font-mono text-xs text-emerald-400 space-y-1 hover:border-[#6a4cf5]/50 transition-all">
+        <div class="text-[#999999]">// Select & Save instant Q&A converter</div>
+        <div>const saveSnippet = async (selectedText, sourceUrl) => &#123;</div>
+        <div class="pl-4 text-white">const qnaCard = await ChromeLocalAI.createQnA(selectedText);</div>
+        <div class="pl-4 text-white">return await storage.local.set(&#123; [qnaCard.id]: qnaCard &#125;);</div>
+        <div>&#125;;</div>
+      </div>
+
+      <p id="snippet-text-3" class="text-gray-400 text-sm">
+        With Select & Save, highlighted fragments are saved with auto-cropped PNG screenshots and local Chrome AI vectors. You can re-visit original webpages with instant deep-link text fragment scrolling at any time.
+      </p>
+    </article>
+
+    <!-- Simulated Extension Action Bar (Floating Bar) -->
+    <div id="floating-action-bar" class="hidden absolute z-30 flex items-center gap-1.5 p-1.5 rounded-full bg-[#1c1c1c] border border-[#0099ff] shadow-2xl shadow-[#0099ff]/30 backdrop-blur-xl animate-fade-in transition-all">
+      <button id="btn-act-save" class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-white text-black text-xs font-bold hover:bg-gray-200 transition-colors shadow">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-3.5 h-3.5 text-emerald-600" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+          <path d="M19 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11l5 5v11a2 2 0 0 1-2 2z"></path>
+          <polyline points="17 21 17 13 7 13 7 21"></polyline>
+          <polyline points="7 3 7 8 15 8"></polyline>
+        </svg>
+        <span>Save Q&A</span>
+      </button>
+
+      <button id="btn-act-google" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-[#090909] text-white hover:text-[#0099ff] border border-[#262626] text-xs font-medium transition-colors">
+        <svg viewBox="0 0 24 24" class="w-3.5 h-3.5 shrink-0">
+          <path fill="#4285F4" d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z"/>
+          <path fill="#34A853" d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z"/>
+          <path fill="#FBBC05" d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.06H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.94l2.85-2.22.81-.63z"/>
+          <path fill="#EA4335" d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.06l3.66 2.84c.87-2.6 3.3-4.52 6.16-4.52z"/>
+        </svg>
+        <span>Google</span>
+      </button>
+
+      <button id="btn-act-chatgpt" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-[#090909] text-white hover:text-emerald-400 border border-[#262626] text-xs font-medium transition-colors">
+        <svg viewBox="0 0 24 24" fill="currentColor" class="w-3.5 h-3.5 text-emerald-400 shrink-0">
+          <path d="M9.205 8.658v-2.26c0-.19.072-.333.238-.428l4.543-2.616c.619-.357 1.356-.523 2.117-.523 2.854 0 4.662 2.212 4.662 4.566 0 .167 0 .357-.024.547l-4.71-2.759a.8.8 0 0 0-.856 0zm10.609 8.8V12.06c0-.333-.143-.57-.429-.737l-5.97-3.473 1.95-1.118a.43.43 0 0 1 .476 0l4.543 2.617c1.309.76 2.189 2.378 2.189 3.948 0 1.808-1.07 3.473-2.76 4.163zM7.802 12.703l-1.95-1.142a.45.45 0 0 1-.239-.428V5.899c0-2.545 1.95-4.472 4.591-4.472 1 0 1.927.333 2.712.928L8.23 5.067c-.285.166-.428.404-.428.737zM12 15.128l-2.795-1.57v-3.33L12 8.658l2.795 1.57v3.33zm1.796 7.23c-1 0-1.927-.332-2.712-.927l4.686-2.712c.285-.166.428-.404.428-.737v-6.898l1.974 1.142c.167.095.238.238.238.428v5.233c0 2.545-1.974 4.472-4.614 4.472zm-5.637-5.303-4.544-2.617c-1.308-.761-2.188-2.378-2.188-3.948A4.48 4.48 0 0 1 4.21 6.327v5.423c0 .333.143.571.428.738l5.947 3.449-1.95 1.118a.43.43 0 0 1-.476 0m-.262 3.9c-2.688 0-4.662-2.021-4.662-4.519 0-.19.024-.38.047-.57l4.686 2.71a.79.79 0 0 0 .856 0l5.97-3.448v2.26c0 .19-.07.333-.237.428l-4.543 2.616c-.619.357-1.356.523-2.117.523m5.899 2.83a5.95 5.95 0 0 0 5.827-4.756C22.287 18.339 24 15.84 24 13.296c0-1.665-.713-3.282-1.998-4.448.119-.5.19-.999.19-1.498 0-3.401-2.759-5.947-5.946-5.946a5.7 5.7 0 0 0-1.88.31A5.96 5.96 0 0 0 10.205 0a5.95 5.95 0 0 0-5.827 4.757C1.713 5.447 0 7.945 0 10.49c0 1.666.713 3.283 1.998 4.448-.119.5-.19 1-.19 1.499 0 3.401 2.759 5.946 5.946 5.946.642 0 1.26-.095 1.88-.309a5.96 5.96 0 0 0 4.162 1.713z"/>
+        </svg>
+        <span>ChatGPT</span>
+      </button>
+
+      <button id="btn-act-claude" class="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-[#090909] text-white hover:text-amber-400 border border-[#262626] text-xs font-medium transition-colors">
+        <svg viewBox="0 0 256 257" class="w-3.5 h-3.5 shrink-0">
+          <path d="M50.2278481,170.321013 L100.585316,142.063797 L101.427848,139.601013 L100.585316,138.24 L98.1225316,138.24 L89.6972152,137.721519 L60.921519,136.943797 L35.9696203,135.906835 L11.795443,134.610633 L5.70329114,133.31443 L0,125.796456 L0.583291139,122.037468 L5.70329114,118.602532 L13.0268354,119.250633 L29.2293671,120.352405 L53.5331646,122.037468 L71.161519,123.07443 L97.28,125.796456 L101.427848,125.796456 L102.011139,124.111392 L100.585316,123.07443 L99.4835443,122.037468 L74.3372152,104.992405 L47.116962,86.9751899 L32.8587342,76.6055696 L25.1463291,71.3559494 L21.2577215,66.4303797 L19.5726582,55.6718987 L26.5721519,47.9594937 L35.9696203,48.6075949 L38.3675949,49.2556962 L47.8946835,56.5792405 L68.2450633,72.3281013 L94.8172152,91.9007595 L98.7058228,95.1412658 L100.261266,94.0394937 L100.455696,93.2617722 L98.7058228,90.3453165 L84.2531646,64.2268354 L68.8283544,37.6546835 L61.958481,26.636962 L60.1437975,20.0263291 C59.4956962,17.3043038 59.0420253,15.0359494 59.0420253,12.2491139 L67.0136709,1.42582278 L71.4207595,-1.42108547e-14 L82.0496203,1.42582278 L86.521519,5.31443038 L93.1321519,20.4151899 L103.825823,44.2005063 L120.417215,76.5407595 L125.277975,86.1326582 L127.87038,95.0116456 L128.842532,97.7336709 L130.527595,97.7336709 L130.527595,96.1782278 L131.888608,77.9665823 L134.416203,55.6070886 L136.878987,26.8313924 L137.721519,18.7301266 L141.739747,9.00860759 L149.711392,3.75898734 L155.933165,6.74025316 L161.053165,14.0637975 L160.340253,18.7949367 L157.294177,38.5620253 L151.331646,69.5412658 L147.443038,90.2805063 L149.711392,90.2805063 L152.303797,87.6881013 L162.803038,73.7539241 L180.431392,51.718481 L188.208608,42.9691139 L197.282025,33.3124051 L203.114937,28.7108861 L214.132658,28.7108861 L222.233924,40.7655696 L218.604557,53.2091139 L207.262785,67.596962 L197.865316,79.7812658 L184.38481,97.9281013 L175.959494,112.44557 L176.737215,113.612152 L178.746329,113.417722 L209.207089,106.936709 L225.668861,103.955443 L245.306329,100.585316 L254.185316,104.733165 L255.157468,108.945823 L251.657722,117.56557 L230.659241,122.75038 L206.031392,127.675949 L169.348861,136.360506 L168.89519,136.684557 L169.413671,137.332658 L185.940253,138.888101 L193.004557,139.276962 L210.308861,139.276962 L242.519494,141.674937 L250.94481,147.248608 L256,154.053671 L255.157468,159.238481 L242.195443,165.849114 L224.696709,161.701266 L183.866329,151.979747 L169.867342,148.48 L167.923038,148.48 L167.923038,149.646582 L179.588861,161.053165 L200.976203,180.366582 L227.742785,205.253671 L229.103797,211.410633 L225.668861,216.271392 L222.039494,215.752911 L198.513418,198.059747 L189.44,190.088101 L168.89519,172.783797 L167.534177,172.783797 L167.534177,174.598481 L172.265316,181.533165 L197.282025,219.123038 L198.578228,230.659241 L196.763544,234.418228 L190.282532,236.686582 L183.153418,235.39038 L168.506329,214.84557 L153.40557,191.708354 L141.221266,170.969114 L139.730633,171.811646 L132.536709,249.259747 L129.166582,253.213165 L121.389367,256.19443 L114.908354,251.268861 L111.473418,243.297215 L114.908354,227.548354 L119.056203,207.003544 L122.426329,190.671392 L125.472405,170.385823 L127.287089,163.64557 L127.157468,163.191899 L125.666835,163.386329 L110.371646,184.38481 L87.1048101,215.817722 L68.6987342,235.52 L64.2916456,237.269873 L56.6440506,233.316456 L57.356962,226.252152 L61.6344304,219.96557 L87.1048101,187.560506 L102.46481,167.469367 L112.380759,155.868354 L112.315949,154.183291 L111.732658,154.183291 L44.0708861,198.124557 L32.0162025,199.68 L26.8313924,194.819241 L27.4794937,186.847595 L29.9422785,184.25519 L50.2926582,170.256203 L50.2278481,170.321013 Z" fill="#D97757"/>
+        </svg>
+        <span>Claude</span>
+      </button>
+    </div>
+
+    <!-- Live Result Toast / Card -->
+    <div id="demo-result-toast" class="hidden mt-6 p-4 rounded-xl bg-gradient-to-r from-[#141414] to-[#1c1c1c] border border-emerald-500/40 shadow-xl space-y-2 animate-slide-up">
+      <div class="flex items-center justify-between">
+        <div class="flex items-center gap-2 text-xs font-bold text-emerald-400">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-ping"></span>
+          <span id="toast-title">Snippet Saved to Q&A Library!</span>
+        </div>
+        <span class="text-[10px] text-[#999999] font-mono">100% On-Device Storage</span>
+      </div>
+      <div id="toast-body" class="text-xs text-gray-200 font-mono p-2.5 rounded bg-[#090909] border border-[#262626]">
+        Q: What is personal knowledge capture logic? <br/>
+        A: "building a second brain shouldn't require saving whole articles when all you need is a 2-line code logic block..."
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<script is:inline>
+  document.addEventListener('DOMContentLoaded', () => {
+    const article = document.getElementById('demo-article');
+    const actionBar = document.getElementById('floating-action-bar');
+    const toast = document.getElementById('demo-result-toast');
+    const toastTitle = document.getElementById('toast-title');
+    const toastBody = document.getElementById('toast-body');
+
+    const sample1 = document.getElementById('sample-quote-1');
+    const sample2 = document.getElementById('sample-quote-2');
+
+    const btnSave = document.getElementById('btn-act-save');
+    const btnGoogle = document.getElementById('btn-act-google');
+    const btnChatGPT = document.getElementById('btn-act-chatgpt');
+    const btnClaude = document.getElementById('btn-act-claude');
+
+    let currentSelectedText = "";
+
+    function showActionBarAt(x, y, text) {
+      currentSelectedText = text;
+      if (actionBar) {
+        actionBar.style.left = `${Math.min(x, 450)}px`;
+        actionBar.style.top = `${Math.max(y - 50, 10)}px`;
+        actionBar.classList.remove('hidden');
+      }
+    }
+
+    // Handle user manual selection
+    article?.addEventListener('mouseup', () => {
+      const selection = window.getSelection();
+      const text = selection ? selection.toString().trim() : '';
+      if (text.length > 5) {
+        showActionBarAt(120, 140, text);
+      }
+    });
+
+    // Sample preset triggers
+    sample1?.addEventListener('click', () => {
+      const snippet = "const saveSnippet = async (selectedText, sourceUrl) => { ... }";
+      showActionBarAt(140, 160, snippet);
+    });
+
+    sample2?.addEventListener('click', () => {
+      const snippet = "a 2-line code logic block or specific question & answer pair";
+      showActionBarAt(100, 110, snippet);
+    });
+
+    // Action handlers
+    btnSave?.addEventListener('click', () => {
+      actionBar?.classList.add('hidden');
+      toastTitle.textContent = "✅ Q&A Knowledge Card Created!";
+      toastBody.innerHTML = `<strong>Q:</strong> Saved Snippet<br/><span class="text-emerald-300">"${currentSelectedText || 'a 2-line code logic block or specific question & answer pair'}"</span><br/><span class="text-[10px] text-gray-400">Captured with PNG Crop + Deep Link Target</span>`;
+      toast?.classList.remove('hidden');
+    });
+
+    btnGoogle?.addEventListener('click', () => {
+      actionBar?.classList.add('hidden');
+      toastTitle.textContent = "🔍 Instant Google Search Launched!";
+      toastBody.textContent = `Querying Google for: "${currentSelectedText || 'React state memory'}"`;
+      toast?.classList.remove('hidden');
+    });
+
+    btnChatGPT?.addEventListener('click', () => {
+      actionBar?.classList.add('hidden');
+      toastTitle.textContent = "🤖 ChatGPT Instant Prompt Sent!";
+      toastBody.textContent = `Prompt: "Explain this snippet in detail: '${currentSelectedText || 'React state memory'}'"`;
+      toast?.classList.remove('hidden');
+    });
+
+    btnClaude?.addEventListener('click', () => {
+      actionBar?.classList.add('hidden');
+      toastTitle.textContent = "🧠 Claude AI Deep Analysis Triggered!";
+      toastBody.textContent = `Analyzing text context with Claude: "${currentSelectedText || 'React state memory'}"`;
+      toast?.classList.remove('hidden');
+    });
+  });
+</script>

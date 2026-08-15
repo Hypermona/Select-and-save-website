@@ -1,0 +1,105 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import ComparisonTable from '../../components/ComparisonTable.astro';
+import { getFaqPageSchema } from '../../lib/faqs';
+
+const seoTitle = "Select & Save vs Omnivore — Local-First Read-It-Later & Snippet Saver";
+const seoDesc = "Omnivore's cloud platform shutdown left users losing data. Select & Save offers 100% local-first browser storage that never depends on central cloud servers.";
+
+const faqSchema = getFaqPageSchema([
+  {
+    q: "Why is Select & Save safer than cloud tools like Omnivore?",
+    a: "When cloud platforms shutdown, user data is lost. Select & Save stores 100% of snippets, tags, and screenshots locally inside your browser's IndexedDB and chrome.storage.local."
+  },
+  {
+    q: "Can I export my Select & Save notes if I switch devices?",
+    a: "Yes! Select & Save provides full JSON export and import capabilities so your notes belong to you forever."
+  }
+]);
+
+const breadcrumbSchema = {
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://select-and-save.bunnycal.com" },
+    { "@type": "ListItem", "position": 2, "name": "Comparisons", "item": "https://select-and-save.bunnycal.com/compare" },
+    { "@type": "ListItem", "position": 3, "name": "Select & Save vs Omnivore", "item": "https://select-and-save.bunnycal.com/compare/omnivore" }
+  ]
+};
+
+const omnivoreSchemas = [faqSchema, breadcrumbSchema];
+---
+
+<Layout title={seoTitle} description={seoDesc} jsonLd={omnivoreSchemas}>
+  <div class="py-16 sm:py-24 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto space-y-12">
+    
+    <div class="space-y-4 text-center sm:text-left">
+      <div class="flex items-center gap-2 justify-center sm:justify-start">
+        <a href="/compare" class="text-xs text-[#0099ff] hover:underline font-mono">← All Comparisons</a>
+        <span class="text-xs text-[#262626]">•</span>
+        <span class="text-xs text-[#6a4cf5] font-mono">Competitor Teardown</span>
+      </div>
+      <h1 class="text-4xl sm:text-6xl font-display font-bold text-white tracking-tight leading-tight">
+        Select & Save vs Omnivore
+      </h1>
+      <p class="text-base sm:text-lg text-[#999999]">
+        Never risk losing your digital second brain to cloud service shutdowns again.
+      </p>
+    </div>
+
+    <!-- Core Differentiator Cards -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div class="p-6 rounded-2xl bg-[#141414] border border-[#262626] space-y-3">
+        <div class="text-xs font-mono text-rose-400 font-bold uppercase">The Cloud Service Risk</div>
+        <h3 class="text-lg font-bold text-white">Omnivore Platform Shutdown</h3>
+        <p class="text-xs text-[#999999] leading-relaxed">
+          When cloud services like Omnivore sunset their servers, users face data export headaches and lost highlights. Relying on remote servers means your knowledge base is tied to a company's business lifecycle.
+        </p>
+      </div>
+
+      <div class="p-6 rounded-2xl bg-[#141414] border border-[#6a4cf5]/50 space-y-3 bg-gradient-to-br from-[#6a4cf5]/10 to-[#141414]">
+        <div class="text-xs font-mono text-[#6a4cf5] font-bold uppercase">The Select & Save Guarantee</div>
+        <h3 class="text-lg font-bold text-white">100% Local Browser Storage</h3>
+        <p class="text-xs text-gray-300 leading-relaxed">
+          Select & Save stores all snippets, Q&A cards, and visual PNG crops inside your local browser hard drive (`chrome.storage.local`). No central cloud backend can ever turn off access to your saved data.
+        </p>
+      </div>
+    </div>
+
+    <!-- Key Advantages List -->
+    <section class="space-y-6">
+      <h2 class="text-2xl font-display font-bold text-white border-b border-[#262626] pb-3">
+        Why Local-First Architecture Matters
+      </h2>
+
+      <div class="space-y-4 text-sm text-[#999999] leading-relaxed">
+        <div class="p-5 rounded-xl bg-[#141414] border border-[#262626] space-y-2">
+          <h3 class="text-white font-bold text-base flex items-center gap-2">
+            <span class="text-[#6a4cf5]">1.</span> Permanent Data Safety
+          </h3>
+          <p>
+            Your research lives in your browser. Even if select-and-save.bunnycal.com is offline, your Chrome extension continues working 100% locally.
+          </p>
+        </div>
+
+        <div class="p-5 rounded-xl bg-[#141414] border border-[#262626] space-y-2">
+          <h3 class="text-white font-bold text-base flex items-center gap-2">
+            <span class="text-emerald-400">2.</span> Offline Gemini Nano AI
+          </h3>
+          <p>
+            Perform natural language searches across your library on airplanes or without internet access using Chrome Built-in AI.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Comparison Table Embed -->
+    <section class="space-y-6 pt-4">
+      <h2 class="text-2xl font-display font-bold text-white">
+        Feature Breakdown: Select & Save vs Omnivore
+      </h2>
+      <ComparisonTable />
+    </section>
+
+  </div>
+</Layout>
