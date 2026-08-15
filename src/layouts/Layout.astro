@@ -23,6 +23,16 @@ const { hideHeaderFooter = false, ...seoProps } = Astro.props;
 <!DOCTYPE html>
 <html lang="en" class="dark scroll-smooth">
   <head>
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KLXTYGB6B9"></script>
+    <script is:inline>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+
+      gtag('config', 'G-KLXTYGB6B9');
+    </script>
+
     <SEO {...seoProps} />
     
     <!-- Preconnect to Google Fonts -->
