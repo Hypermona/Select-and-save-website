@@ -92,10 +92,10 @@ const features = [
         <th class="py-4 px-4 text-[#00d2ff] bg-[#00d2ff]/10 border-x border-[#00d2ff]/30 text-center font-bold">
           Select & Save ⚡
         </th>
-        <th class="py-4 px-4 text-gray-400 text-center">Raindrop.io</th>
-        <th class="py-4 px-4 text-gray-400 text-center">Omnivore</th>
-        <th class="py-4 px-4 text-gray-400 text-center">Anybox</th>
-        <th class="py-4 px-4 text-gray-400 text-center">Webbites</th>
+        <th class="py-4 px-4 text-gray-300 text-center">Raindrop.io</th>
+        <th class="py-4 px-4 text-gray-300 text-center">Omnivore</th>
+        <th class="py-4 px-4 text-gray-300 text-center">Anybox</th>
+        <th class="py-4 px-4 text-gray-300 text-center">Webbites</th>
       </tr>
     </thead>
     <tbody class="divide-y divide-white/10 text-xs sm:text-sm">
@@ -103,7 +103,7 @@ const features = [
         <tr class={i % 2 === 0 ? 'bg-[#08090d]/40' : 'bg-[#0e1017]/60'}>
           <td class="py-4 px-6">
             <div class="font-semibold text-white">{f.name}</div>
-            <div class="text-[11px] text-gray-400 mt-0.5">{f.description}</div>
+            <div class="text-[11px] text-gray-300 mt-0.5">{f.description}</div>
           </td>
           
           <!-- Select & Save -->
@@ -114,46 +114,46 @@ const features = [
           </td>
 
           <!-- Raindrop.io -->
-          <td class="py-4 px-4 text-center text-gray-400">
+          <td class="py-4 px-4 text-center text-gray-300">
             {f.raindrop === true ? (
               <span class="text-emerald-400 font-bold">✓</span>
             ) : f.raindrop === false ? (
-              <span class="text-rose-500/60 font-bold">✕</span>
+              <span class="text-rose-400 font-bold">✕</span>
             ) : (
-              <span class="text-amber-400 text-xs font-semibold">{f.raindrop}</span>
+              <span class="text-amber-300 text-xs font-semibold">{f.raindrop}</span>
             )}
           </td>
 
           <!-- Omnivore -->
-          <td class="py-4 px-4 text-center text-gray-400">
+          <td class="py-4 px-4 text-center text-gray-300">
             {f.omnivore === true ? (
               <span class="text-emerald-400 font-bold">✓</span>
             ) : f.omnivore === false ? (
-              <span class="text-rose-500/60 font-bold">✕</span>
+              <span class="text-rose-400 font-bold">✕</span>
             ) : (
-              <span class="text-amber-400 text-xs font-semibold">{f.omnivore}</span>
+              <span class="text-amber-300 text-xs font-semibold">{f.omnivore}</span>
             )}
           </td>
 
           <!-- Anybox -->
-          <td class="py-4 px-4 text-center text-gray-400">
+          <td class="py-4 px-4 text-center text-gray-300">
             {f.anybox === true ? (
               <span class="text-emerald-400 font-bold">✓</span>
             ) : f.anybox === false ? (
-              <span class="text-rose-500/60 font-bold">✕</span>
+              <span class="text-rose-400 font-bold">✕</span>
             ) : (
-              <span class="text-amber-400 text-xs font-semibold">{f.anybox}</span>
+              <span class="text-amber-300 text-xs font-semibold">{f.anybox}</span>
             )}
           </td>
 
           <!-- Webbites -->
-          <td class="py-4 px-4 text-center text-gray-400">
+          <td class="py-4 px-4 text-center text-gray-300">
             {f.webbites === true ? (
               <span class="text-emerald-400 font-bold">✓</span>
             ) : f.webbites === false ? (
-              <span class="text-rose-500/60 font-bold">✕</span>
+              <span class="text-rose-400 font-bold">✕</span>
             ) : (
-              <span class="text-amber-400 text-xs font-semibold">{f.webbites}</span>
+              <span class="text-amber-300 text-xs font-semibold">{f.webbites}</span>
             )}
           </td>
         </tr>
