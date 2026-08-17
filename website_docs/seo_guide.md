@@ -72,7 +72,7 @@ Include JSON-LD scripts inside the `<head>` of relevant pages so Google displays
     "ratingValue": "4.9",
     "ratingCount": "128"
   },
-  "downloadUrl": "https://chromewebstore.google.com/detail/select-and-save",
+  "downloadUrl": "https://chromewebstore.google.com/detail/select-and-save/fdahohfefbhomeejeekneopnafdmcdai",
   "featureList": [
     "100% Private Local Browser Storage",
     "On-Device Gemini Nano Local AI Chat",

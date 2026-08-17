@@ -19,7 +19,7 @@
 Select any text, code snippet, or article section across the web. Save it with visual screenshot capture, organize into auto-domain folders, and query your knowledge base offline using built-in browser AI.
 
 ### Call to Actions
-- **Primary CTA**: [Add to Chrome — Free](https://chromewebstore.google.com/detail/select-and-save) *(Chrome Store Icon)*
+- **Primary CTA**: [Add to Chrome — Free](https://chromewebstore.google.com/detail/select-and-save/fdahohfefbhomeejeekneopnafdmcdai) *(Chrome Store Icon)*
 - **Secondary CTA**: [Explore Features](#features)
 
 ### Highlight Metric Pills
